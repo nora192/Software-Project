@@ -17,7 +17,7 @@ public class EtisalatFactory implements ServiceFactory {
 
 	public Mobile createProductInternet() {
 		// TODO Auto-generated method stub
-		return new MobileEtisalat(name, price);
+		return (Mobile) new MobileEtisalat(name, price);
 	}
 
 	public Internet createProductMobile() {

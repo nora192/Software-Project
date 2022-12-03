@@ -6,7 +6,8 @@ public class PayByCard extends Payment{
 	public PayByCard(String CardNum){
 		this.cardNum = cardNum;	
 	}
-	public void pay(double amount) {
+	public double pay(double amount) {
+		return amount;
 		// TODO Auto-generated method stub
 		
 	}
