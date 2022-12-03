@@ -1,5 +1,6 @@
 package Internet;
-
+import Internet.Internet;
+import Mobile.Mobile;
 public class InternetEtisalat implements Internet {
 
 	public String name = "";
