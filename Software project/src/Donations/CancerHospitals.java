@@ -1,22 +1,35 @@
+
 package Donations;
 
-public class CancerHospitals implements Donations {
+import Internet.Internet;
+import Payment.Payment;
+
+public class CancerHospitals implements Internet {
+
 	public String name = "";
-	public double amount = 0;
-	
+	public double price = 0;
+	public Payment p = null;
 	
 	public CancerHospitals(String name, double price) {
 		this.name = name;
-		this.amount = price;
+		this.price = price;
 	}
-	
-	public void pay() {
-		// TODO Auto-generated method stub
-		
+
+
+	public double pay() {
+		return p.pay(price); 
 	}
+
 
 	public String decription() {
 		// TODO Auto-generated method stub
 		return "welcome to the services of " + this.name; 
 	}
+	
+	public void setPayment(Payment p) {
+		this.p = p;
+	}
+	
+	
+
 }
