@@ -1,6 +1,6 @@
 package Payment;
 
-public class CreditCard implements IcreditCard{
+public class CreditCard extends IcreditCard{
     private String ID;
     private String password;
     private double amount;

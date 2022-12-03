@@ -7,7 +7,7 @@ public class PayByCash implements Payment{
 	public void PayByCash(String address){
 		this.address = address;	
 	}
-	public void pay() {
+	public void pay(double amount) {
 		// TODO Auto-generated method stub
 		
 	}

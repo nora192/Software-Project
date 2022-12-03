@@ -6,7 +6,7 @@ public class PayByCard implements Payment{
 	public void PayBuyCard(String CardNum){
 		this.cardNum = cardNum;	
 	}
-	public void pay() {
+	public void pay(double amount) {
 		// TODO Auto-generated method stub
 		
 	}

@@ -1,6 +1,6 @@
 package Payment;
 
-public interface IcreditCard {
-    double getAmount();
-    void setAmount(double Amount);
+public abstract class IcreditCard {
+    abstract double getAmount();
+    abstract void setAmount(double Amount);
 }
