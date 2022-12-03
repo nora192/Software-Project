@@ -1,6 +1,11 @@
 package Payment;
 
-public interface IcreditCard {
-    double getAmount();
-    void setAmount(double Amount);
+public abstract class IcreditCard {
+	private double amount;
+	public double getAmount(){
+        return amount;
+    }
+    public void setAmount(double Amount){
+        this.amount = Amount;
+    }
 }
