@@ -1,10 +1,19 @@
 package Discounts;
 
-public class overall implements overallDiscount {
+import Services.Services;
 
-	public void pay() {
-		// TODO Auto-generated method stub
-		
+public class overall implements Discounts_Decorator {
+	public Services obj = null;
+	public double DiscountAmount = 0;
+
+	overall(Services c, double DiscountAmount)
+	{
+		this.obj = c;
+		this.DiscountAmount = DiscountAmount;
 	}
+	public double pay() {
+		return obj.pay()*DiscountAmount;
+	}
+
 
 }

@@ -9,13 +9,13 @@ public class Quarter implements Landline {
 		this.name = name;
 		this.price = price;
 	}
-	
-	public void pay() {
-		// TODO Auto-generated method stub
-		
+
+	public double pay() {
+
+		return price;
 	}
 
-	
+
 	public String decription() {
 		// TODO Auto-generated method stub
 		return "welcome to the services of " + this.name; 

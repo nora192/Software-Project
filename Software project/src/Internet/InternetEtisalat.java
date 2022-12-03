@@ -12,9 +12,9 @@ public class InternetEtisalat implements Internet {
 	}
 
 	
-	public void pay() {
+	public double pay() {
 		
-		
+		return price;
 	}
 
 	public String decription() {
