@@ -10,11 +10,12 @@ public class MobileEtisalat implements Mobile {
 		this.price = price;
 	}
 
-	
-	public void pay() {
-		
-		
+
+	public double pay() {
+
+		return price;
 	}
+
 
 	public String decription() {
 		// TODO Auto-generated method stub

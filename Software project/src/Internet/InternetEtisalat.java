@@ -1,5 +1,6 @@
 package Internet;
-
+import Internet.Internet;
+import Mobile.Mobile;
 public class InternetEtisalat implements Internet {
 
 	public String name = "";
@@ -11,9 +12,9 @@ public class InternetEtisalat implements Internet {
 	}
 
 	
-	public void pay() {
+	public double pay() {
 		
-		
+		return price;
 	}
 
 	public String decription() {

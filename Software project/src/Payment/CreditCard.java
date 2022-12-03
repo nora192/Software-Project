@@ -9,10 +9,5 @@ public class CreditCard extends IcreditCard{
         this.password=password;
         this.amount=amount;
     }
-    public double getAmount(){
-        return amount;
-    }
-    public void setAmount(double Amount){
-        this.amount = Amount;
-    }
+    
 }
