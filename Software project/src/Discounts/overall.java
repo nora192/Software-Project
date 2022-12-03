@@ -16,14 +16,11 @@ public class overall implements Discounts_Decorator {
 	}
 	
 	public double pay() {
-		
 		return obj.pay() * DiscountAmount;
-		
 	}
 
 	public void setPayment(Payment p) {
-		// TODO Auto-generated method stub
-		
+		this.p = p;	
 	}
 	
 

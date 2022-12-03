@@ -15,4 +15,9 @@ public class PayByWallet extends Payment{
 		
 	}
 
+	public void updateCredit(double amount) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

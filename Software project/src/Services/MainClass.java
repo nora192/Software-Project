@@ -19,12 +19,14 @@ public class MainClass {
 		System.out.println("hello world maryam");
 		
 		IcreditCard credit = new CreditCard("1","11",1000);
-		PayByCard payment = new PayByCard(credit);
+		Payment payment = new PayByCard(credit);
 		
 		s.setPayment(payment);
 		
 		Discounts_Decorator d  = new overall(s,0.5);
+		d.setPayment(payment);
 		double sum = d.pay();
+//		payment.updateCredit(sum);
 		
 		System.out.println(sum);
 		System.out.println(credit.getAmount());
