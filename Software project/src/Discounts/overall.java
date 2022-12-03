@@ -8,7 +8,7 @@ public class overall implements Discounts_Decorator {
 	public double DiscountAmount = 0;
 	Payment p = null;
 
-	overall(Services c, double DiscountAmount)
+	public overall(Services c, double DiscountAmount)
 	{
 		this.obj = c;
 		this.DiscountAmount = DiscountAmount;
