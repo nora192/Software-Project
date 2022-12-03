@@ -16,9 +16,8 @@ public class MobileWE implements Mobile {
 
 
 	public double pay() {
-		return p.pay(price); 
+		return p.pay(price);	
 	}
-
 
 	public String decription() {
 		// TODO Auto-generated method stub

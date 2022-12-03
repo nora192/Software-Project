@@ -7,10 +7,9 @@ public class PayByCash extends Payment{
 	public PayByCash(String address){
 		this.address = address;	
 	}
+	
 	public double pay(double amount) {
 		return amount;
-		// TODO Auto-generated method stub
-		
 	}
 
 }
