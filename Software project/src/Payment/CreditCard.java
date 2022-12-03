@@ -1,6 +1,6 @@
 package Payment;
 
-public class CreditCard implements IcreditCard{
+public class CreditCard extends IcreditCard{
     private String ID;
     private String password;
     private double amount;
@@ -9,10 +9,5 @@ public class CreditCard implements IcreditCard{
         this.password=password;
         this.amount=amount;
     }
-    public double getAmount(){
-        return amount;
-    }
-    public void setAmount(double Amount){
-        this.amount = Amount;
-    }
+    
 }

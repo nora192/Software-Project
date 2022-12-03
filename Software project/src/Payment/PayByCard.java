@@ -1,12 +1,12 @@
 package Payment;
 
-public class PayByCard implements Payment{
+public class PayByCard extends Payment{
 	
 	String cardNum;
-	public void PayBuyCard(String CardNum){
+	public PayByCard(String CardNum){
 		this.cardNum = cardNum;	
 	}
-	public void pay() {
+	public void pay(double amount) {
 		// TODO Auto-generated method stub
 		
 	}

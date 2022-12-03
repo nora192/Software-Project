@@ -1,13 +1,13 @@
 package Payment;
 
-public class PayByCash implements Payment{
+public class PayByCash extends Payment{
 	
 	private String address;
 	
-	public void PayByCash(String address){
+	public PayByCash(String address){
 		this.address = address;	
 	}
-	public void pay() {
+	public void pay(double amount) {
 		// TODO Auto-generated method stub
 		
 	}
