@@ -2,12 +2,25 @@ package Payment;
 
 public class PayByCard extends Payment{
 	
-	IcreditCard credit;
+	String cardNum;
+	public IcreditCard credit;
+	
+	public PayByCard(String CardNum){
+		this.cardNum = cardNum;	
+	}
+
+	
 	public PayByCard(IcreditCard credit){
 		this.credit = credit;
 	}
-	public void pay(double amount) {
-		credit.decrement(amount);
+
+	
+	public double pay(double amount) {
+		this.credit.decrement(amount);
+		return amount;
+		
 	}
+		// TODO Auto-generated method stub
+		
 
 }

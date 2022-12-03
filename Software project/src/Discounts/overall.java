@@ -4,6 +4,7 @@ import Payment.Payment;
 import Services.Services;
 
 public class overall implements Discounts_Decorator {
+	
 	public Services obj = null;
 	public double DiscountAmount = 0;
 	Payment p = null;
@@ -15,12 +16,16 @@ public class overall implements Discounts_Decorator {
 	}
 	
 	public double pay() {
-		return obj.pay()*DiscountAmount;
+		
+		return obj.pay() * DiscountAmount;
+		
+	}
+
+	public void setPayment(Payment p) {
+		// TODO Auto-generated method stub
+		
 	}
 	
-	public void setPayment(Payment p) {
-		this.p = p;
-	}
 
 
 }

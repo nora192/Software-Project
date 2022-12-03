@@ -4,15 +4,9 @@ public abstract class IWallet {
 	
 	private double amount;
 
-	public double getAmount(){
-		return amount;
-	}
+	public abstract double getAmount();
 	
-	public void decriment(double am){
-		amount -= am;
-	}
+	public abstract void decriment(double am);
 	
-	public void incriment(double am){
-		amount += am;
-	}
+	public abstract void incriment(double am);
 }
