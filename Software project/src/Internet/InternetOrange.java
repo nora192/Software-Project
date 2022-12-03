@@ -13,7 +13,6 @@ public class InternetOrange implements Internet {
 	
 	public void pay() {
 		
-		
 	}
 
 	public String decription() {
