@@ -16,9 +16,11 @@ public class PayByCard extends Payment{
 
 	
 	public double pay(double amount) {
-		this.credit.decrement(amount);
 		return amount;
-		
+	}
+	
+	public void updateCredit(double amount) {
+		this.credit.decrement(amount);
 	}
 		// TODO Auto-generated method stub
 		

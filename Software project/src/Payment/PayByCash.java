@@ -12,4 +12,8 @@ public class PayByCash extends Payment{
 		return amount;
 	}
 
+	public void updateCredit(double amount) {
+		// TODO Auto-generated method stub
+	}
+
 }
