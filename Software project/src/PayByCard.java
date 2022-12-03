@@ -1,12 +1,12 @@
 
 public class PayByCard implements Payment{
 	
-	String cardNum;
-	public void PayBuyCard(String CardNum){
-		this.cardNum = cardNum;	
+	private ICreditCard creditCard;
+	public PayByCard(ICreditCard creditCard){
+		this.creditCard = creditCard;	
 	}
 	public void pay() {
-		// TODO Auto-generated method stub
+		System.out.println("do pay by card");
 		
 	}
 	
