@@ -5,13 +5,13 @@ import Mobile.Mobile;
 
 public class VodafoneFactory implements ServiceFactory {
 
-	public void createProductInternet(Internet internet) {
-		// TODO Auto-generated method stub
+	public Internet createProductInternet() {
+		return new Internet();
 		
 	}
 
-	public void createProductMobile(Mobile mobile) {
-		// TODO Auto-generated method stub
+	public Mobile createProductMobile() {
+		return new Mobile();
 		
 	}
 

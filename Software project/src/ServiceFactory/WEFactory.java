@@ -5,12 +5,14 @@ import Mobile.Mobile;
 
 public class WEFactory implements ServiceFactory {
 
-	public void createProductInternet(Internet internet) {
+	public Internet createProductInternet() {
+		return internet;
 		// TODO Auto-generated method stub
 		
 	}
 
-	public void createProductMobile(Mobile mobile) {
+	public Mobile createProductMobile() {
+		return mobile;
 		// TODO Auto-generated method stub
 		
 	}
