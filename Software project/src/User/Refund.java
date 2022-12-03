@@ -5,9 +5,9 @@ public class Refund implements UserService {
 	public Refund(int id){
 		this.id = id;
 	}
-	public void execute() {
+	public boolean execute() {
 		// TODO Auto-generated method stub
-		
+		return false;
 	}
 
 }

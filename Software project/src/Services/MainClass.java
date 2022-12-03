@@ -6,8 +6,11 @@ import Payment.PayByCash;
 import Payment.Payment;
 
 import Payment.*;
-
-
+import User.IUser;
+import User.User;
+import User.Register;
+import User.IAdmin;
+import User.Admin;
 public class MainClass {
 
 	public static void main(String[] args) {
@@ -30,8 +33,11 @@ public class MainClass {
 		
 		System.out.println(sum);
 		System.out.println(credit.getAmount());
-		
-
+		IUser user = new User("kholoud","ll","fgf");
+		Admin admin= new Admin();
+		admin.addUser(user);
+		admin.addUser(user);
+		admin.printUsers();
 	}
 
 }
