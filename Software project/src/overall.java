@@ -1,4 +1,9 @@
 
-public class overall implements Discounts_Decorator {
+public class overall implements overallDiscount {
+
+	public void pay() {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
