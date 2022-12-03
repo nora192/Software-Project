@@ -6,8 +6,16 @@ public class PayByCard extends Payment{
 	public PayByCard(IcreditCard credit){
 		this.credit = credit;
 	}
-	public void pay(double amount) {
-		credit.decrement(amount);
+	public double pay(double amount) {
+		if(credit.getAmount() >= amount){
+			credit.decrement(amount);
+			return amount;
+		}
+		else
+			System.out.println("No enough money in your credit card.");
+		
+		return 0;
 	}
+	
 
 }

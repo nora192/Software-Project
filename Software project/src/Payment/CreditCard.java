@@ -15,14 +15,8 @@ public class CreditCard extends IcreditCard{
     public void setAmount(double Amount){
         this.amount = Amount;
     }
-    @Override
-    public void decrement(double amount) {
-        if(this.getAmount()>=amount){
-            double newAmount = getAmount()-amount;
-            setAmount(newAmount);
-        }
-        else{
-            System.out.println("Your Balance Is Less Than The Amount Your Want To Withdraw");
-        }
+
+    public void decrement(double am) {
+        amount -= am;
     }
 }
