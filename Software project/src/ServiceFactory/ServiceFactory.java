@@ -2,9 +2,10 @@ package ServiceFactory;
 
 import Internet.Internet;
 import Mobile.Mobile;
+import Services.Services;
 
 public interface ServiceFactory {
 	
-	public Internet createProductInternet();
-	public Mobile createProductMobile();
+	public Mobile createProductInternet();
+	public Internet createProductMobile();
 }
