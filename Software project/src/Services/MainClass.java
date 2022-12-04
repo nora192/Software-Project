@@ -6,15 +6,21 @@ import Internet.InternetEtisalat;
 import Mobile.MobileWE;
 import Payment.*;
 import User.AddWalletFunds;
-import User.IUser;
-import User.User;
+
 import User.IUser;
 import User.User;
 import User.Register;
+
+import User.IRefundsRequests;
+import User.IRefundInvoker;
+import User.RefundInvoker;
+import User.RefundsRequests;
 import User.IAdmin;
 import User.Admin;
-
+import User.RefundsRequests;
 import java.util.ArrayList;
+
+import static User.Admin.refundRequests;
 
 public class MainClass {
 
@@ -31,6 +37,7 @@ public class MainClass {
 		//System.out.println("hello world maryam");
 		IUser user1 = new User("nada","l","gf");
 		IcreditCard credit = new CreditCard(user1,"11",1000);
+		user1.creditCard = credit;
 		UpdatedPayment payment = new PayByCard(credit);
 		((MobileWE) s).setPayment(payment);
 
@@ -51,7 +58,13 @@ public class MainClass {
 
 		//System.out.println(sum);
 		System.out.println(credit.getAmount());
-		
+		IRefundInvoker invoke = new RefundInvoker();
+		invoke.addRequestToList(user1,s,200);
+
+		IAdmin admin = new Admin();
+		admin.checkRefunds();
+		user1.checkRefund();
+		System.out.println(user1.creditCard.getAmount());
 		//at first admin should apply discount either overall(applied to all services)
 		//or specific(applied to a specific services)
 		//if specific;

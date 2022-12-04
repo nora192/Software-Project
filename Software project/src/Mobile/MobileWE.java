@@ -6,7 +6,7 @@ import User.IUser;
 
 public class MobileWE implements Mobile {
 
-	String ServiceName = "MobileWE";
+	String name;
 	IUser user;
 	public double price = 0;
 	public Payment p;
@@ -24,7 +24,7 @@ public class MobileWE implements Mobile {
 
 
 	public MobileWE(String name, double price) {
-		this.ServiceName = ServiceName;
+		this.name = name;
 		this.price = price;
 	}
 
@@ -48,7 +48,7 @@ public class MobileWE implements Mobile {
 		this.price = price;
 	}
 	public String getServiceName(){
-		return ServiceName;
+		return name;
 	}
 
 }

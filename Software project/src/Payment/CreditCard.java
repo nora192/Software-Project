@@ -31,5 +31,9 @@ public class CreditCard extends IcreditCard{
         amount -= am;
         transactions.add(am);
     }
+    public void increment(double amount){
+        double newAmount = getAmount()+amount;
+        setAmount(newAmount);
+    }
 
 }
