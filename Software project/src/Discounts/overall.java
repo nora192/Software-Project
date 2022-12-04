@@ -4,9 +4,9 @@ import Payment.Payment;
 import Services.Services;
 
 public class overall implements Discounts_Decorator {
-	
+
 	Services service;
-	//Payment p;
+
 	double DiscountAmount = 0;
 
 	public overall(Services service ,double DiscountAmount)
@@ -15,9 +15,22 @@ public class overall implements Discounts_Decorator {
 		this.service = service;
 	}
 
+	@Override
+	public void setDiscountPrice(double DiscountPrice) {
 
-	public double pay() {
-		return service.pay() * (DiscountAmount / 100);
 	}
+
+	@Override
+	public double getDiscountPrice() {
+		return 0;
+	}
+
+//	public double pay() {
+//		return service.pay() * (DiscountAmount / 100);
+//	}
+
+
+
+
 
 }
