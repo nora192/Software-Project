@@ -9,7 +9,10 @@ public interface Services {
 	public Payment payment =null;
 	
 	public void setPayment (Payment p);
+	public double getPrice();
+	public void setPrice(double price);
+	public String getServiceName();
 	
-	public double pay();
+	public void pay();
 
 }

@@ -1,17 +1,12 @@
 package Services;
 import Discounts.Discounts_Decorator;
 import Discounts.overall;
+import Discounts.specific;
 import Mobile.MobileWE;
-
-import Payment.PayByCash;
-import Payment.Payment;
-
 import Payment.*;
-
 import User.AddWalletFunds;
 import User.IUser;
 import User.User;
-
 import User.IUser;
 import User.User;
 import User.Register;
@@ -22,35 +17,53 @@ public class MainClass {
 	public static void main(String[] args) {
 
 
-		Services s = new MobileWE("cairo", 500);
+		//Services s = new MobileWE("cairo", 500);
 		//Payment p = new PayByCash("cairo");
 		
 
-		System.out.println("hello world maryam");
+		//System.out.println("hello world maryam");
 		
-		IcreditCard credit = new CreditCard("1","11",1000);
-		Payment payment = new PayByCard(credit);
+		//IcreditCard credit = new CreditCard("1","11",1000);
+		//Payment payment = new PayByCard(credit);
 		
-		s.setPayment(payment);
+		//s.setPayment(payment);
 		
-		Discounts_Decorator d  = new overall(s,0.5);
-		d.setPayment(payment);
-		double sum = d.pay();
+		//Discounts_Decorator d  = new overall(s,0.5);
+		//d.setPayment(payment);
+		//double sum = d.pay();
 //		payment.updateCredit(sum);
 		
-		System.out.println(sum);
-		System.out.println(credit.getAmount());
+		/*System.out.println(sum);
+		System.out.println(credit.getAmount());*/
 		
+		//at first admin should apply discount either overall(applied to all services)
+		//or specific(applied to a specific services)
+		//if specific;
+		Discounts_Decorator d = new specific("MobileWE", 50);
+		//new user
+		IUser user1 = new User("nada","l","gf");
+		Services ssr = new MobileWE(user1, 350);
+		//set service to a discount
+		d.setService(ssr);
+		IcreditCard c = new CreditCard(user1,"000",1000);
+		//credit card amount before paying
+		System.out.println(c.getAmount());
+		//now user user1 credit card has 1000
+		Payment p = new PayByCard(c);
+		//set payment method to service(pay by card)
+		ssr.setPayment(p);
+		//apply discount 
+		d.pay();
+		//after discount.
+		System.out.println(c.getAmount());
 		
-
-		Services ssr = new MobileWE("cairo", 500);
 		//Payment p = new PayByCash("cairo");
 		
 
-		System.out.println("hello world maryam");
+		/*System.out.println("hello world maryam");
 		
-		IcreditCard c = new CreditCard("1","11",1000);
-		Payment p = new PayByCard(c);
+		//IcreditCard c = new CreditCard("1","11",1000);
+		//Payment p = new PayByCard(c);
 		
 		ssr.setPayment(p);
 		
@@ -75,7 +88,7 @@ public class MainClass {
 		AddWalletFunds addfund = new AddWalletFunds(50,A);
 		addfund.execute();
 		
-		System.out.println(A.getWallet().getAmount());
+		System.out.println(A.getWallet().getAmount());*/
 
 	}
 

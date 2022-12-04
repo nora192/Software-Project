@@ -1,11 +1,15 @@
 package Payment;
 
+import User.IUser;
+
 public class CreditCard extends IcreditCard{
     private String ID;
     private String password;
     private double amount;
+    IUser user;
     
-    public CreditCard(String ID, String password, double amount){
+    public CreditCard(IUser user, String password, double amount){
+    	this.user = user;
         this.ID = ID;
         this.password=password;
         this.amount=amount;
