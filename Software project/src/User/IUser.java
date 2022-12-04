@@ -6,10 +6,11 @@ import Payment.IcreditCard;
 public abstract class IUser {
     String username;
     String password;
-    
+    String email;
     IWallet wallet;
     IcreditCard creditCard;
     
     abstract void setCreditCard(IcreditCard creditCard);
-    abstract void setWallet(IWallet wallet);
+    public abstract void setWallet(IWallet wallet);
+    public abstract IWallet getWallet();
 }

@@ -1,11 +1,15 @@
 package Payment;
 
+import User.IUser;
+
 public class CreditCard extends IcreditCard{
     private String ID;
     private String password;
     private double amount;
+    IUser user;
     
-    public CreditCard(String ID, String password, double amount){
+    public CreditCard(IUser user, String password, double amount){
+    	this.user = user;
         this.ID = ID;
         this.password=password;
         this.amount=amount;
@@ -18,8 +22,17 @@ public class CreditCard extends IcreditCard{
     public void setAmount(double Amount){
         this.amount = Amount;
     }
+
+
+
+    public void decrement(double am) {
+        amount -= am;
+    }
+    /*public void decrement(double amount) {
+=======
     
     public void decrement(double amount) {
+>>>>>>> branch 'main' of https://github.com/nora192/Software-Project.git
         if(this.getAmount()>=amount){
             double newAmount = getAmount()-amount;
             setAmount(newAmount);
@@ -28,5 +41,5 @@ public class CreditCard extends IcreditCard{
         else{
             System.out.println("Your Balance Is Less Than The Amount Your Want To Withdraw");
         }
-    }
+    }*/
 }

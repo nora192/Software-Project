@@ -14,11 +14,27 @@ public class PayByCard extends Payment{
 		this.credit = credit;
 	}
 
-	
 	public double pay(double amount) {
+		if(credit.getAmount() >= amount){
+			credit.decrement(amount);
+			return amount;
+		}
+		else
+			System.out.println("No enough money in your credit card.");
+		
+		return 0;
+
+	}
+	/*public double pay(double amount) {
+		return amount;
+	}*/
+	
+
+	/*public double pay(double amount) {
 		return amount;
 	}
-	
+	*/
+
 	public void updateCredit(double amount) {
 		this.credit.decrement(amount);
 	}

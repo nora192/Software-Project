@@ -4,22 +4,26 @@ import Payment.IWallet;
 import Payment.IcreditCard;
 
 public class User extends IUser{
-    String email;
-    String password;
-    
     IWallet wallet;
     IcreditCard creditCard=null;
-    
-    User(String email,String password){
+ 
+
+    public User(String email,String password,String username){
         this.email = email;
         this.password = password;
+        this.username=username;
     }
     
     void setCreditCard(IcreditCard creditCard){
         this.creditCard = creditCard;
     }
     
-    void setWallet(IWallet wallet){
+   public void setWallet(IWallet wallet){
         this.wallet = wallet;
     }
+    
+    public IWallet getWallet(){
+    	return wallet;
+    }
 }
+

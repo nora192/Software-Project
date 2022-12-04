@@ -1,14 +1,17 @@
 package Payment;
 
+import User.IUser;
+
 public class Wallet extends IWallet {
-	private String userName, password;
 	private double amount;
-	public Wallet(String userName, String password, double amount){
-		this.userName = userName;
+	IUser user;
+	public Wallet(IUser user, double amount){
+		this.user = user;
 		this.amount = amount;
-		this.password = password;
 	}
-	
+	public void setAmount(double am){
+		amount = am;
+	}
 	public double getAmount(){
 		return amount;
 	}
@@ -19,6 +22,7 @@ public class Wallet extends IWallet {
 	
 	public void incriment(double am){
 		amount += am;
+		this.setAmount(amount);
 	}
 	
 }
