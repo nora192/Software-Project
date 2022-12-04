@@ -2,15 +2,13 @@ package User;
 
 import java.util.ArrayList;
 
+import static User.Admin.users;
+
 public class Register implements UserService{
 	IUser user;
-	ArrayList<IUser>users = new ArrayList<IUser>();
 	public Register(IUser user){
 		this.user = user;
 
-	}
-	void setUsers(ArrayList<IUser>users){
-		this.users = users;
 	}
 	public void execute() {
 		IUser obj = new User(user.email,user.password, user.username);

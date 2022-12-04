@@ -1,6 +1,8 @@
 package User;
 
 
+import Payment.IcreditCard;
+
 public class AddWalletFunds implements UserService{
 	
 	double amount;
@@ -10,7 +12,8 @@ public class AddWalletFunds implements UserService{
 		this.user = user;
 	}
 	public void execute() {
-		user.getWallet().incriment(amount);
+		user.creditCard.decrement(amount);
+		user.wallet.incriment(amount);
 		
 		// TODO Auto-generated method stub
 

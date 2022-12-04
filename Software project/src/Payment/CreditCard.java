@@ -2,6 +2,8 @@ package Payment;
 
 import User.IUser;
 
+import static User.User.transactions;
+
 public class CreditCard extends IcreditCard{
     private String ID;
     private String password;
@@ -27,6 +29,7 @@ public class CreditCard extends IcreditCard{
 
     public void decrement(double am) {
         amount -= am;
+        transactions.add(am);
     }
 
 }

@@ -6,7 +6,13 @@ public class Refund implements UserService {
 		this.id = id;
 	}
 	public void execute() {
+
+
 		// TODO Auto-generated method stub
 	}
+	boolean getRespond(boolean respond){
+		return respond;
+	};
+
 
 }

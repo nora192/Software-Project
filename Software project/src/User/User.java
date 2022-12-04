@@ -3,9 +3,12 @@ package User;
 import Payment.IWallet;
 import Payment.IcreditCard;
 
+import java.util.ArrayList;
+
 public class User extends IUser{
     IWallet wallet;
     IcreditCard creditCard=null;
+    public static ArrayList<Double> transactions = new ArrayList<Double>();
  
 
     public User(String email,String password,String username){

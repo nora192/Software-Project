@@ -2,6 +2,8 @@ package Payment;
 
 import User.IUser;
 
+import static User.User.transactions;
+
 public class Wallet extends IWallet {
 	private double amount;
 	IUser user;
@@ -18,6 +20,7 @@ public class Wallet extends IWallet {
 	
 	public void decriment(double am){
 		amount -= am;
+		transactions.add(am);
 	}
 	
 	public void incriment(double am){
