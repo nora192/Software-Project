@@ -6,21 +6,15 @@ import Internet.InternetEtisalat;
 import Mobile.MobileWE;
 import Payment.*;
 import User.AddWalletFunds;
-
+import User.IUser;
+import User.User;
 import User.IUser;
 import User.User;
 import User.Register;
-
-import User.IRefundsRequests;
-import User.IRefundInvoker;
-import User.RefundInvoker;
-import User.RefundsRequests;
 import User.IAdmin;
 import User.Admin;
-import User.RefundsRequests;
-import java.util.ArrayList;
 
-import static User.Admin.refundRequests;
+import java.util.ArrayList;
 
 public class MainClass {
 
@@ -37,34 +31,36 @@ public class MainClass {
 		//System.out.println("hello world maryam");
 		IUser user1 = new User("nada","l","gf");
 		IcreditCard credit = new CreditCard(user1,"11",1000);
-		user1.creditCard = credit;
 		UpdatedPayment payment = new PayByCard(credit);
 		((MobileWE) s).setPayment(payment);
 
-		//Discounts_Decorator d  = new overall(s,50);
+		Discounts_Decorator d  = new overall(s,50);
 		//d= new overall(s2,50);
 		ArrayList<Services> Discounts=new ArrayList<Services>();
 		Discounts.add(s);
 		Discounts.add(s2);
 
+		//((MobileWE) s).pay();
+
+		Discounts_Decorator d2  = new specific(d,50);
+
+		double sum = d2.pay();
+		payment.UpdateAmount(sum);
+
+		System.out.println(credit.getAmount());
+
+
+
+		//Discounts_Decorator d2  = new specific(d,50);
 
 		//d.setPayment(payment);
-		Discounts_Decorator d  = new specific(s);
-		 d.setDiscountPrice(50);
-		Discounts_Decorator d2  = new specific(d);
-		d2.setDiscountPrice(50);
-		 ((MobileWE) s).pay();
+
+		//double sum = ((MobileWE) s).pay();
 		//payment.UpdateAmount(sum);
 
 		//System.out.println(sum);
-		System.out.println(credit.getAmount());
-		IRefundInvoker invoke = new RefundInvoker();
-		invoke.addRequestToList(user1,s,200);
-
-		IAdmin admin = new Admin();
-		admin.checkRefunds();
-		user1.checkRefund();
-		System.out.println(user1.creditCard.getAmount());
+		//System.out.println(credit.getAmount());
+		
 		//at first admin should apply discount either overall(applied to all services)
 		//or specific(applied to a specific services)
 		//if specific;

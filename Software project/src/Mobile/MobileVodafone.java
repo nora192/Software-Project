@@ -10,17 +10,6 @@ public class MobileVodafone implements Mobile {
 	IUser user;
 	public double price = 0;
 	public Payment p;
-	public double DiscountPrice = 1;
-
-
-	public void setDiscountPrice(double DiscountPrice) {
-		this.DiscountPrice = DiscountPrice;
-	}
-
-	@Override
-	public double getDiscountPrice() {
-		return DiscountPrice;
-	}
 
 
 	public MobileVodafone(String name, double price) {

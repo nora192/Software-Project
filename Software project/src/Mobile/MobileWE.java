@@ -10,17 +10,7 @@ public class MobileWE implements Mobile {
 	IUser user;
 	public double price = 0;
 	public Payment p;
-	public double DiscountPrice;
 
-
-	public void setDiscountPrice(double DiscountPrice) {
-		this.DiscountPrice = DiscountPrice;
-	}
-
-	@Override
-	public double getDiscountPrice() {
-		return DiscountPrice;
-	}
 
 
 	public MobileWE(String name, double price) {
@@ -33,7 +23,7 @@ public class MobileWE implements Mobile {
 	}
 	
 	public double pay() {
-		return p.pay(price * DiscountPrice);
+		return p.pay(price );
 	}
 
 	public String description() {

@@ -9,5 +9,5 @@ public interface Donations extends Services {
 	public void setPayment (Payment p);
 	public String description ();
 	public double pay();
-	public double getDiscountPrice();
+
 }
