@@ -28,18 +28,5 @@ public class CreditCard extends IcreditCard{
     public void decrement(double am) {
         amount -= am;
     }
-    /*public void decrement(double amount) {
-=======
-    
-    public void decrement(double amount) {
->>>>>>> branch 'main' of https://github.com/nora192/Software-Project.git
-        if(this.getAmount()>=amount){
-            double newAmount = getAmount()-amount;
-            setAmount(newAmount);
-        }
-        
-        else{
-            System.out.println("Your Balance Is Less Than The Amount Your Want To Withdraw");
-        }
-    }*/
+
 }

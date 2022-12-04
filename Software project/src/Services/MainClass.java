@@ -17,45 +17,44 @@ public class MainClass {
 	public static void main(String[] args) {
 
 
-		//Services s = new MobileWE("cairo", 500);
-		//Payment p = new PayByCash("cairo");
+		Services s = new MobileWE("mobile we", 500);
+		Payment p = new PayByCash("cairo");
 		
 
 		//System.out.println("hello world maryam");
+		IUser user1 = new User("nada","l","gf");
+		IcreditCard credit = new CreditCard(user1,"11",1000);
+		Payment payment = new PayByCard(credit);
+
+		((MobileWE) s).setPayment(payment);
 		
-		//IcreditCard credit = new CreditCard("1","11",1000);
-		//Payment payment = new PayByCard(credit);
-		
-		//s.setPayment(payment);
-		
-		//Discounts_Decorator d  = new overall(s,0.5);
+		Discounts_Decorator d  = new overall(s,50);
 		//d.setPayment(payment);
-		//double sum = d.pay();
-//		payment.updateCredit(sum);
+		double sum = d.pay();
+   	//	payment.updateCredit(sum);
 		
-		/*System.out.println(sum);
-		System.out.println(credit.getAmount());*/
+		System.out.println(sum);
+		System.out.println(credit.getAmount());
 		
 		//at first admin should apply discount either overall(applied to all services)
 		//or specific(applied to a specific services)
 		//if specific;
-		Discounts_Decorator d = new specific("MobileWE", 50);
-		//new user
-		IUser user1 = new User("nada","l","gf");
-		Services ssr = new MobileWE(user1, 350);
+	//	Discounts_Decorator d = new specific("MobileWE", 50);
+	//	IUser user1 = new User("nada","l","gf");
+	//	Services ssr = new MobileWE("mobile we ", 350);
 		//set service to a discount
-		d.setService(ssr);
-		IcreditCard c = new CreditCard(user1,"000",1000);
+		//d.setService(ssr);/*
+		//IcreditCard c = new CreditCard(user1,"000",1000);
 		//credit card amount before paying
-		System.out.println(c.getAmount());
+		//System.out.println(c.getAmount());
 		//now user user1 credit card has 1000
-		Payment p = new PayByCard(c);
+//		Payment p = new PayByCard(c);
 		//set payment method to service(pay by card)
-		ssr.setPayment(p);
+		//ssr.setPayment(p);
 		//apply discount 
-		d.pay();
+		//d.pay();
 		//after discount.
-		System.out.println(c.getAmount());
+		//System.out.println(c.getAmount());
 		
 		//Payment p = new PayByCash("cairo");
 		

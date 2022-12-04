@@ -10,8 +10,8 @@ public class MobileWE implements Mobile {
 	IUser user;
 	public double price = 0;
 	public Payment p;
-	
-	public MobileWE(IUser user, double price) {
+
+	public MobileWE(String name, double price) {
 		this.ServiceName = ServiceName;
 		this.price = price;
 	}
@@ -20,8 +20,9 @@ public class MobileWE implements Mobile {
 		this.p = p;
 	}
 	
-	public void pay() {
-		p.pay(price);	
+	public double pay() {
+		return p.pay(price);
+
 	}
 
 	public String decription() {

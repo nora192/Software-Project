@@ -16,7 +16,7 @@ public class PayByCard extends Payment{
 
 	public double pay(double amount) {
 		if(credit.getAmount() >= amount){
-			credit.decrement(amount);
+			//credit.decrement(amount);
 			return amount;
 		}
 		else

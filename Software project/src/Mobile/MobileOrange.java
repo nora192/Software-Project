@@ -1,7 +1,6 @@
 
 package Mobile;
 
-import Internet.Internet;
 import Payment.Payment;
 import User.IUser;
 
@@ -36,8 +35,9 @@ public class MobileOrange implements Mobile {
 		this.p = p;
 	}
 	
-	public void pay() {
-		p.pay(price);	
+	public double pay() {
+		p.pay(price);
+		return 0;
 	}
 	
 	
