@@ -10,6 +10,18 @@ public class MobileWE implements Mobile {
 	IUser user;
 	public double price = 0;
 	public Payment p;
+	public double DiscountPrice;
+
+
+	public void setDiscountPrice(double DiscountPrice) {
+		this.DiscountPrice = DiscountPrice;
+	}
+
+	@Override
+	public double getDiscountPrice() {
+		return DiscountPrice;
+	}
+
 
 	public MobileWE(String name, double price) {
 		this.ServiceName = ServiceName;
@@ -21,11 +33,10 @@ public class MobileWE implements Mobile {
 	}
 	
 	public double pay() {
-		return p.pay(price);
-
+		return p.pay(price * DiscountPrice);
 	}
 
-	public String decription() {
+	public String description() {
 		// TODO Auto-generated method stub
 		return "welcome to the services of " + this.name; 
 	}

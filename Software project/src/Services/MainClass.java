@@ -2,6 +2,7 @@ package Services;
 import Discounts.Discounts_Decorator;
 import Discounts.overall;
 import Discounts.specific;
+import Internet.InternetEtisalat;
 import Mobile.MobileWE;
 import Payment.*;
 import User.AddWalletFunds;
@@ -12,31 +13,43 @@ import User.User;
 import User.Register;
 import User.IAdmin;
 import User.Admin;
+
+import java.util.ArrayList;
+
 public class MainClass {
 
 	public static void main(String[] args) {
 
-
+		ArrayList<Services> AllServices=new ArrayList<Services>();
 		Services s = new MobileWE("mobile we", 500);
+		Services s2 = new InternetEtisalat("Intrenet Etisalat" , 200);
+
 		Payment p = new PayByCash("cairo");
-		
+		AllServices.add(s);
+		AllServices.add(s2);
 
 		//System.out.println("hello world maryam");
 		IUser user1 = new User("nada","l","gf");
 		IcreditCard credit = new CreditCard(user1,"11",1000);
 		UpdatedPayment payment = new PayByCard(credit);
-
 		((MobileWE) s).setPayment(payment);
 
 		//Discounts_Decorator d  = new overall(s,50);
+		//d= new overall(s2,50);
+		ArrayList<Services> Discounts=new ArrayList<Services>();
+		Discounts.add(s);
+		Discounts.add(s2);
+
+
 		//d.setPayment(payment);
+		Discounts_Decorator d  = new specific(s);
+		 d.setDiscountPrice(50);
+		Discounts_Decorator d2  = new specific(d);
+		d2.setDiscountPrice(50);
+		 ((MobileWE) s).pay();
+		//payment.UpdateAmount(sum);
 
-		double sum = s.pay();
-		payment.UpdateAmount(sum);
-
-
-		
-		System.out.println(sum);
+		//System.out.println(sum);
 		System.out.println(credit.getAmount());
 		
 		//at first admin should apply discount either overall(applied to all services)

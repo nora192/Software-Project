@@ -7,5 +7,7 @@ public interface Donations extends Services {
 	public String name = "";
 	public double price = 0;
 	public void setPayment (Payment p);
-	public String decription ();
+	public String description ();
+	public double pay();
+	public double getDiscountPrice();
 }
