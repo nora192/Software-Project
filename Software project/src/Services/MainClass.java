@@ -24,14 +24,17 @@ public class MainClass {
 		//System.out.println("hello world maryam");
 		IUser user1 = new User("nada","l","gf");
 		IcreditCard credit = new CreditCard(user1,"11",1000);
-		Payment payment = new PayByCard(credit);
+		UpdatedPayment payment = new PayByCard(credit);
 
 		((MobileWE) s).setPayment(payment);
-		
-		Discounts_Decorator d  = new overall(s,50);
+
+		//Discounts_Decorator d  = new overall(s,50);
 		//d.setPayment(payment);
-		double sum = d.pay();
-   	//	payment.updateCredit(sum);
+
+		double sum = s.pay();
+		payment.UpdateAmount(sum);
+
+
 		
 		System.out.println(sum);
 		System.out.println(credit.getAmount());

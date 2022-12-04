@@ -1,6 +1,6 @@
 package Payment;
 
-public class PayByCard extends Payment{
+public class PayByCard implements Payment,UpdatedPayment{
 	
 	String cardNum;
 	public IcreditCard credit;
@@ -16,7 +16,6 @@ public class PayByCard extends Payment{
 
 	public double pay(double amount) {
 		if(credit.getAmount() >= amount){
-			//credit.decrement(amount);
 			return amount;
 		}
 		else
@@ -25,20 +24,8 @@ public class PayByCard extends Payment{
 		return 0;
 
 	}
-	/*public double pay(double amount) {
-		return amount;
-	}*/
-	
 
-	/*public double pay(double amount) {
-		return amount;
+	public void UpdateAmount(double amount) {
+		credit.decrement(amount);
 	}
-	*/
-
-	public void updateCredit(double amount) {
-		this.credit.decrement(amount);
-	}
-		// TODO Auto-generated method stub
-		
-
 }

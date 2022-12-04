@@ -1,7 +1,7 @@
 package Payment;
 
-public abstract class Payment {
+public interface Payment {
 	
-	public abstract double pay(double amount);
-	public abstract void updateCredit(double amount);
+	public double pay(double amount);
+
 }

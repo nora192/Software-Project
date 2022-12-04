@@ -1,6 +1,6 @@
 package Payment;
 
-public class PayByCash extends Payment{
+public class PayByCash implements Payment{
 	
 	private String address;
 	
@@ -10,10 +10,6 @@ public class PayByCash extends Payment{
 	
 	public double pay(double amount) {
 		return amount;
-	}
-
-	public void updateCredit(double amount) {
-		// TODO Auto-generated method stub
 	}
 
 }

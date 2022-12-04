@@ -16,7 +16,6 @@ public class specific implements Discounts_Decorator {
 		this.service = service;
 	}
 
-
 	public double pay() {
 		return service.pay() * (DiscountAmount / 100);
 	}

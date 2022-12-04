@@ -1,11 +1,10 @@
 package Payment;
 
-public class PayByWallet extends Payment{
+public class PayByWallet implements Payment,UpdatedPayment{
 	IWallet wallet;
 	
 	public double pay(double amount) {
 		if(wallet.getAmount() >= amount){
-			wallet.decriment(amount);
 			return amount;
 		}
 		else {
@@ -15,9 +14,9 @@ public class PayByWallet extends Payment{
 		
 	}
 
-	public void updateCredit(double amount) {
-		// TODO Auto-generated method stub
-		
-	}
 
+	@Override
+	public void UpdateAmount(double amount) {
+		wallet.decriment(amount);
+	}
 }
