@@ -9,17 +9,7 @@ public class NGOs implements Internet {
 	public String name = "";
 	public double price = 0;
 	public Payment p = null;
-	public double DiscountPrice = 1;
 
-
-	public void setDiscountPrice(double DiscountPrice) {
-		this.DiscountPrice = DiscountPrice;
-	}
-
-	@Override
-	public double getDiscountPrice() {
-		return DiscountPrice;
-	}
 
 
 	public NGOs(String name, double price) {

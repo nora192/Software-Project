@@ -34,23 +34,32 @@ public class MainClass {
 		UpdatedPayment payment = new PayByCard(credit);
 		((MobileWE) s).setPayment(payment);
 
-		//Discounts_Decorator d  = new overall(s,50);
+		Discounts_Decorator d  = new overall(s,50);
 		//d= new overall(s2,50);
 		ArrayList<Services> Discounts=new ArrayList<Services>();
 		Discounts.add(s);
 		Discounts.add(s2);
 
+		//((MobileWE) s).pay();
+
+		Discounts_Decorator d2  = new specific(d,50);
+
+		double sum = d2.pay();
+		payment.UpdateAmount(sum);
+
+		System.out.println(credit.getAmount());
+
+
+
+		//Discounts_Decorator d2  = new specific(d,50);
 
 		//d.setPayment(payment);
-		Discounts_Decorator d  = new specific(s);
-		 d.setDiscountPrice(50);
-		Discounts_Decorator d2  = new specific(d);
-		d2.setDiscountPrice(50);
-		 ((MobileWE) s).pay();
+
+		//double sum = ((MobileWE) s).pay();
 		//payment.UpdateAmount(sum);
 
 		//System.out.println(sum);
-		System.out.println(credit.getAmount());
+		//System.out.println(credit.getAmount());
 		
 		//at first admin should apply discount either overall(applied to all services)
 		//or specific(applied to a specific services)
