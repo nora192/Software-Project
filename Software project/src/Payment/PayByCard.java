@@ -25,11 +25,16 @@ public class PayByCard extends Payment{
 		return 0;
 
 	}
+	/*public double pay(double amount) {
+		return amount;
+	}*/
 	
+
 	/*public double pay(double amount) {
 		return amount;
 	}
 	*/
+
 	public void updateCredit(double amount) {
 		this.credit.decrement(amount);
 	}

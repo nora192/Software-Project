@@ -13,6 +13,13 @@ public class AddWalletFunds implements UserService{
 		user.getWallet().incriment(amount);
 		
 		// TODO Auto-generated method stub
+
 	}
+
+	/*public boolean execute() {
+		// TODO Auto-generated method stub
+		return false;
+
+	}*/
 
 }

@@ -6,7 +6,7 @@ import Payment.IcreditCard;
 public abstract class IUser {
     String username;
     String password;
-    
+    String email;
     IWallet wallet;
     IcreditCard creditCard;
     
