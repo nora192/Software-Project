@@ -11,5 +11,6 @@ public abstract class IUser {
     IcreditCard creditCard;
     
     abstract void setCreditCard(IcreditCard creditCard);
-    abstract void setWallet(IWallet wallet);
+    public abstract void setWallet(IWallet wallet);
+    public abstract IWallet getWallet();
 }

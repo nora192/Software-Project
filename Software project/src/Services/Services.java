@@ -12,5 +12,4 @@ public interface Services {
 	
 	public double pay();
 
-
 }

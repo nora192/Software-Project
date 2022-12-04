@@ -10,7 +10,7 @@ public class User extends IUser{
     IWallet wallet;
     IcreditCard creditCard=null;
     
-    User(String email,String password){
+    public User(String email,String password){
         this.email = email;
         this.password = password;
     }
@@ -19,7 +19,11 @@ public class User extends IUser{
         this.creditCard = creditCard;
     }
     
-    void setWallet(IWallet wallet){
+   public void setWallet(IWallet wallet){
         this.wallet = wallet;
+    }
+    
+    public IWallet getWallet(){
+    	return wallet;
     }
 }
