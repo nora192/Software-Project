@@ -20,11 +20,13 @@ public class MobileOrange implements Mobile {
 		this.ServiceName = ServiceName;
 		this.price = price;
 	}
-
+	public String getName() {
+		return this.ServiceName;
+	}
 	public MobileOrange(){}
 	public String description() {
 		// TODO Auto-generated method stub
-		return "welcome to the services of " + this.name; 
+		return "welcome to the services of " + this.ServiceName;
 	}
 	public void setPayment(Payment p) {
 		this.p = p;

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class MobileWE implements Mobile{
 
-	String name = "Mobile We";
+	String ServiceName = "Mobile We";
 
 	public double price = 500;
 	public Payment p;
@@ -20,8 +20,14 @@ public class MobileWE implements Mobile{
 	{
 		this.MyHandler = Handler;
 	}
+
+	@Override
+	public String getName() {
+		return ServiceName;
+	}
+
 	public MobileWE(String name, double price) {
-		this.name = name;
+		this.ServiceName = name;
 		this.price = price;
 	}
 	public MobileWE()
@@ -37,7 +43,7 @@ public class MobileWE implements Mobile{
 	}
 
 	public String description() {
-		return "welcome to the services of " + this.name; 
+		return "welcome to the services of " + this.ServiceName;
 	}
 	
 

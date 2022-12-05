@@ -31,6 +31,11 @@ public class InternetEtisalat implements Internet {
 		return "welcome to the services of " + this.name; 
 	}
 
+	@Override
+	public String getName() {
+		return this.name;
+	}
+
 
 	public void setPayment(Payment p) {
 		this.p = p;

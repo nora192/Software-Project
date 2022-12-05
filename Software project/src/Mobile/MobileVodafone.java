@@ -17,6 +17,11 @@ public class MobileVodafone implements Mobile {
 		this.MyHandler = Handler;
 	}
 
+	@Override
+	public String getName() {
+		return null;
+	}
+
 	public MobileVodafone(String name, double price) {
 		this.ServiceName = ServiceName;
 		this.price = price;
@@ -35,7 +40,7 @@ public class MobileVodafone implements Mobile {
 
 	public String description() {
 		// TODO Auto-generated method stub
-		return "welcome to the services of " + this.name;
+		return "welcome to the services of " + this.ServiceName;
 	}
 	
 	

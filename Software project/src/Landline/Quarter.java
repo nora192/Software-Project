@@ -7,7 +7,7 @@ import Services.IFormHandler;
 
 public class Quarter implements Landline {
 
-	public String name = "Quarter Service";
+	public String ServiceName = "Quarter Service";
 	public double price = 600;
 	public Payment p = null;
 	public IFormHandler MyHandler;
@@ -17,7 +17,7 @@ public class Quarter implements Landline {
 	}
 
 	public Quarter(String name, double price) {
-		this.name = name;
+		this.ServiceName = name;
 		this.price = price;
 	}
 	public Quarter()
@@ -33,7 +33,12 @@ public class Quarter implements Landline {
 		// TODO Auto-generated method stub
 		return "welcome to the services of " + this.name; 
 	}
-	
+
+	@Override
+	public String getName() {
+		return this.ServiceName;
+	}
+
 	public void setPayment(Payment p) {
 		this.p = p;
 	}

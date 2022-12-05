@@ -18,6 +18,7 @@ import User.SubscribeService;
 import User.UserService;
 import User.IAdmin;
 import User.Admin;
+import User.DiscountHandler;
 
 
 import java.util.ArrayList;
@@ -77,7 +78,13 @@ public class MainClass {
 		int choice = sc.nextInt();
 		if(choice == 1)
 		{
-
+			System.out.println("enter what you want to do:");
+			System.out.println("1-add discount");
+			int adminChoice = sc.nextInt();
+			if(adminChoice == 1){
+				DiscountHandler dh = new DiscountHandler();
+				dh.addDiscount();
+			}
 		}
 		if (choice == 2)
 		{

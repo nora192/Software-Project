@@ -33,7 +33,12 @@ public class Monthly implements Landline {
 		// TODO Auto-generated method stub
 		return "welcome to the services of " + this.name; 
 	}
-	
+
+	@Override
+	public String getName() {
+		return this.name;
+	}
+
 	public void setPayment(Payment p) {
 		this.p = p;
 	}
