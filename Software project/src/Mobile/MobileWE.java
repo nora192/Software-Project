@@ -13,17 +13,21 @@ public class MobileWE implements Mobile{
 	String name = "Mobile We";
 	ArrayList<IUser > UsersList = new ArrayList< IUser>();
 	ArrayList<ArrayList<String>> FormList = new ArrayList <ArrayList<String>>();
+	
 	public double price = 500;
 	public Payment p;
 	public IFormHandler MyHandler;
+	
 	public void setHandler(IFormHandler Handler)
 	{
 		this.MyHandler = Handler;
 	}
+	
 	public MobileWE(String name, double price) {
 		this.name = name;
 		this.price = price;
 	}
+	
 	public MobileWE()
 	{}
 
