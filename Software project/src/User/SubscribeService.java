@@ -37,13 +37,13 @@ public class SubscribeService implements UserService{
     public void execute() {
         Scanner sc=new Scanner(System.in);
         int num;
-        System.out.println("Enter\n ( 1 ) for Mobile Services \n ( 2 ) for Internet Services \n ( 3 ) for LandLine Services \n ( 4 ) for Donations :");
+        System.out.println("\n Enter: \n ( 1 ) for Mobile Services \n ( 2 ) for Internet Services \n ( 3 ) for LandLine Services \n ( 4 ) for Donations :");
             
         	num=sc.nextInt();
             
             if(num == 1)
             {
-                System.out.println("Enter\n ( 0 ) for MobileWe Service \n ( 1 ) for Mobile Orange Service \n ( 2 ) for Mobile Vodafone Service \n ( 3 ) for Mobile Etisalat service :");
+                System.out.println("\n Enter: \n ( 0 ) for MobileWe Service \n ( 1 ) for Mobile Orange Service \n ( 2 ) for Mobile Vodafone Service \n ( 3 ) for Mobile Etisalat service :");
                 num = sc.nextInt();
                 IFormHandler hn= new FormHandler(AllServices.get(num));
                 AllServices.get(num).setHandler(hn);
@@ -76,7 +76,7 @@ public class SubscribeService implements UserService{
             }
             if(num == 2)
             {
-                System.out.println("Enter\n ( 4 ) for Internet We Service \n ( 5 ) for Internet Orange Service \n ( 6 ) for Internet Vodafone Service \n ( 7 ) for Internet Etisalat service :");
+                System.out.println("\n Enter: \n ( 4 ) for Internet We Service \n ( 5 ) for Internet Orange Service \n ( 6 ) for Internet Vodafone Service \n ( 7 ) for Internet Etisalat service :");
                 num = sc.nextInt();
                 
                 IFormHandler hn= new FormHandler(AllServices.get(num));
@@ -112,7 +112,7 @@ public class SubscribeService implements UserService{
             
             if(num == 3)
             {    
-            	System.out.println("Enter\n ( 8 ) for Monthly Service \n ( 9 ) for Quarter Service :");
+            	System.out.println("\n Enter: \n ( 8 ) for Monthly Service \n ( 9 ) for Quarter Service :");
                 num = sc.nextInt();
                 
                 IFormHandler hn= new FormHandler(AllServices.get(num));
@@ -135,7 +135,7 @@ public class SubscribeService implements UserService{
             }
             if(num == 4)
             {
-                System.out.println("Enter\n ( 10 ) for School Donations \n ( 11 ) for Cancer Hospitals Donations \n ( 12 ) for NGOs Donations :");
+                System.out.println("\n Enter: \n ( 10 ) for School Donations \n ( 11 ) for Cancer Hospitals Donations \n ( 12 ) for NGOs Donations :");
                 num = sc.nextInt();
                 
                 IFormHandler hn= new FormHandler(AllServices.get(num));
@@ -161,6 +161,7 @@ public class SubscribeService implements UserService{
                     ((NGOs) chosenService).description();
 
                 }
+                
               }
 
 

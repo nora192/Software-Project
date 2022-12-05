@@ -7,7 +7,7 @@ public class Search implements UserService{
     
     public void execute() {
         
-    	System.out.println("welcome to the system \n choose the service you want from the list\n" +
+    	System.out.println("\n Choose the service you want from the list\n" +
                 "1-Mobile service\n" +
                 "2-Internet service\n" +
                 "3-Donations serivce\n" +
@@ -18,7 +18,7 @@ public class Search implements UserService{
         int choice = sc.nextInt();
         
         if(choice == 1){
-            System.out.println("choose the number of the service you want\n" +
+            System.out.println(
                     "1-Etisalat\n" +
                     "2-Orange\n" +
                     "3-Vodafone\n" +
@@ -26,7 +26,7 @@ public class Search implements UserService{
         }
         
         else if(choice == 2){
-            System.out.println("choose the number of the service you want\n" +
+            System.out.println(
                     "1-Etisalat\n" +
                     "2-Orange\n" +
                     "3-Vodafone\n" +
@@ -35,7 +35,7 @@ public class Search implements UserService{
         }
         
         else if(choice == 3){
-            System.out.println("choose the number of the service you want\n" +
+            System.out.println(
                     "1-Cancer Hospitals\n" +
                     "2-NGOS\n" +
                     "3-School\n");
@@ -43,7 +43,7 @@ public class Search implements UserService{
         }
         
         else if(choice == 4){
-            System.out.println("choose the number of the service you want\n" +
+            System.out.println(
                     "1-Monthly\n" +
                     "2-Quarter\n"
                     );

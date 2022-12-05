@@ -14,7 +14,7 @@ public class RefundHandling implements IAdmin {
             int respond;
             
             System.out.println("Refund Request Info : "+ refundRequests.get(0).user.username +" refund amount "+refundRequests.get(0).amount);
-            System.out.println("click \n1-Accept \n2-Reject");
+            System.out.println("click: \n1- Accept \n2- Reject\n");
             Scanner sc = new Scanner(System.in);
             
             respond = sc.nextInt();

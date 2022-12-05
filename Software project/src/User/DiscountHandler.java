@@ -25,7 +25,7 @@ public class DiscountHandler implements IAdmin{
 		
 		if(discChoice == 1){
 				discount = new overall(discount, discAmount);
-				System.out.println("A discount of " + discAmount + " is applied on all services \n");
+				System.out.println("A discount of " + discAmount + " % is applied on all services \n");
 			}
 			
 		else if(discChoice == 2){
@@ -33,7 +33,7 @@ public class DiscountHandler implements IAdmin{
 				
 				for (int i=0; i< AllServices.size(); i++){
 					
-					System.out.println(i+1 +" "+ AllServices.get(i).getName());
+					System.out.println(i +" "+ AllServices.get(i).getName());
 				}
 				
 				int seviceChoice = sc.nextInt();

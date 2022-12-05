@@ -20,10 +20,10 @@ public class Refund implements UserService {
 				refundRequests.get(id).user.creditCard.increment(refundRequests.get(id).amount);
 			}
 			
-			refundRequests.get(id).user.updateRefundState("Accepted");
+			refundRequests.get(id).user.updateRefundState("Accepted\n");
 		}
 		else{
-			refundRequests.get(id).user.updateRefundState("Rejected");
+			refundRequests.get(id).user.updateRefundState("Rejected\n");
 		}
 		
 		refundRequests.remove(0);

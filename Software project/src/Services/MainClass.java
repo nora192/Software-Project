@@ -90,13 +90,13 @@ public class MainClass {
 		
 		while (true) {
 			
-			System.out.println("\n 0- Exit system \n 1- for Admin Mode \n 2- for User Mode ");
+			System.out.println("0- Exit system \n 1- Admin Mode \n 2- for User Mode \n");
 			
 			int choice = sc.nextInt();
 			
 			if(choice == 1)
 			{
-				System.out.println("enter what you want to do:");
+				System.out.println("Enter what you want to do: ");
 				System.out.println("1-add discount");
 				System.out.println("2-Check refunds");
 				
@@ -133,7 +133,7 @@ public class MainClass {
 				
 				while (num != 0)
 				{
-					System.out.println(" \n 1- Subscribe to Service \n 2- Pay \n 3- Request a refund \n 4-Register to the system as a new user \n 5-Search for the available Services \n");
+					System.out.println("1- Subscribe to Service \n 2- Pay \n 3- Request a refund \n 4- Register to the system as a new user \n 5- Search for the available Services \n");
 					num = sc.nextInt();
 					
 					if(num == 1)
@@ -145,7 +145,7 @@ public class MainClass {
 					else if (num == 2) {
 						
 						
-						System.out.println("\n 1.Credit Card \n 2.Wallet \n 3.Cash");
+						System.out.println("1.Credit Card \n 2.Wallet \n 3.Cash \n");
 						int n = 1;
 						n = sc.nextInt();
 						
@@ -192,7 +192,7 @@ public class MainClass {
 					else if (num == 3) {
 						
 						if (chosenService == null) {
-							System.out.println("\n please subscribe to a service first and make a purchase \n");
+							System.out.println("Please subscribe to a service first and make a purchase \n");
 							
 							continue;
 						}
@@ -205,7 +205,7 @@ public class MainClass {
 						IRefundInvoker invoker = new RefundInvoker();
 						invoker.addRequestToList(user1, (Services) chosenService, amnt);
 						
-						System.out.println("\n Background admin mode \n");
+						System.out.println("\n ---- Background admin mode ----  \n");
 						
 						processingRequest(handleRefunds);
 						

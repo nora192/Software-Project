@@ -17,7 +17,7 @@ public class Register implements UserService{
 		boolean flag= true;
 		
 		for(int i=0;i<users.size();i++){
-			if(users.get(i).username.equals(obj.username)  ){
+			if(users.get(i).email.equals(obj.email)  ){
 				flag = false;
 				break;
 			}
