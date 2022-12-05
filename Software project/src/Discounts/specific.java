@@ -18,12 +18,12 @@ public class specific implements Discounts_Decorator {
 		return service.pay() * (DiscountAmount / 100);
 	}
 
-	@Override
+	
 	public String description() {
 		return null;
 	}
 
-	@Override
+	
 	public void setHandler(IFormHandler hn) {
 
 	}

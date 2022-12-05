@@ -15,7 +15,7 @@ public class PayByWallet implements Payment,UpdatedPayment{
 	}
 
 
-	@Override
+	
 	public void UpdateAmount(double amount) {
 		wallet.decriment(amount);
 	}

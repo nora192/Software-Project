@@ -1,7 +1,11 @@
 package User;
 
+import java.util.ArrayList;
+
 public interface IAdmin {
-    public void addUser(IUser obj);
-    public void checkRefunds();
+	
+	public static ArrayList<IUser>users = new ArrayList<IUser>();
+	public static ArrayList<RefundsRequests> refundRequests = new ArrayList<RefundsRequests>();
+  
     public void printUsers();
 }

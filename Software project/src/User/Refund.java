@@ -1,13 +1,15 @@
 package User;
 
-import static User.Admin.refundRequests;
+import static User.RefundHandling.refundRequests;
 
 public class Refund implements UserService {
 	private final int id;
 	boolean flag;
+	
 	public Refund(int id){
 		this.id = id;
 	}
+	
 	public void execute() {
 		if(flag){
 			if(refundRequests.get(id).user.creditCard==null){

@@ -17,6 +17,7 @@ public class FormHandler implements IFormHandler {
         obj.UsersList.add(user);
         obj.FormList.add(Form);
     }
+    
     public void PrintForm()
     {
         for(int i = 0; i< obj.UsersList.size(); i++)
@@ -34,8 +35,10 @@ public class FormHandler implements IFormHandler {
     public void GetInformation(IUser user)
     {
         obj.description();
+        
         Scanner sc = new Scanner(System.in);
         ArrayList<String> form= new ArrayList<String>();
+        
         for(int i=0;i<4;i++) {
             String data;
             System.out.println("Enter your " + Titles[i] + " :");
