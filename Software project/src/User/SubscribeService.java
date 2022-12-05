@@ -16,7 +16,8 @@ public class SubscribeService implements UserService{
     }
 
 
-    public void execute() {
+    @SuppressWarnings("static-access")
+	public void execute() {
         Scanner sc=new Scanner(System.in);
         int num;
         System.out.println("Enter\n ( 1 ) for Mobile Services \n ( 2 ) for Internet Services \n ( 3 ) for LandLine Services \n ( 4 ) for Donations :");
@@ -25,10 +26,12 @@ public class SubscribeService implements UserService{
             {
                 System.out.println("Enter\n ( 0 ) for Mobile We Service \n ( 1 ) for Mobile Orange Service \n ( 2 ) for Mobile Vodafone Service \n ( 3 ) for Mobile Etisalat service :");
                 num = sc.nextInt();
-                    IFormHandler hn= new FormHandler(AllServices.get(num));
-                    AllServices.get(num).setHandler(hn);
-                    AllServices.get(num).MyHandler.GetInformation(this.user);
-                    AllServices.get(num).MyHandler.PrintForm();
+                    
+                IFormHandler hn= new FormHandler(AllServices.get(num));
+                
+                AllServices.get(num).setHandler(hn);
+                AllServices.get(num).MyHandler.GetInformation(this.user);
+                AllServices.get(num).MyHandler.PrintForm();
 
             }
             if(num == 2)
