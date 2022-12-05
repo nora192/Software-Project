@@ -24,8 +24,12 @@ public class Refund implements UserService {
 		refundRequests.remove(0);
 
 	}
+	void setRespond (boolean respond){
+		this.flag = respond;
+	}
 	public void getRespond(boolean respond){
-		flag=respond;
+
+		setRespond(respond);
 	}
 
 

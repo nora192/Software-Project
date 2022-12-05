@@ -48,8 +48,17 @@ public class MainClass {
 		Services s2 = new InternetEtisalat("Intrenet Etisalat" , 200);
 		IUser user1 = new User("nada@gmail","l","gf");
 		IcreditCard credit = new CreditCard(user1,"11",1000);
-
-
+		IUser A = new User("nada", "l", "gf");
+		IAdmin Admin = new Admin();
+		Admin.addUser(user1);
+		Admin.addUser(A);
+		Scanner sc = new Scanner(System.in);
+		String name = sc.nextLine();
+		String mail = sc.nextLine();
+		String pass = sc.nextLine();
+		User user = new User(mail,pass,name);
+		Admin.addUser(user);
+		Admin.printUsers();
 
 		((MobileWE) s).MyHandler.GetInformation(user1);
 		((MobileWE) s).MyHandler.PrintForm();
@@ -79,7 +88,6 @@ public class MainClass {
 
 		double sum = d2.pay();
 		payment.UpdateAmount(sum);
-
 		System.out.println(credit.getAmount());
 
 
