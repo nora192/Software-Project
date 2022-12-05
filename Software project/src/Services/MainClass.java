@@ -17,10 +17,12 @@ public class MainClass {
 	public static ArrayList<Services> AllServices = new ArrayList<Services>();
 
 	public static void main(String[] args) {
+		
 		Services MobileWeService = new MobileWE();
 		Services MobileOrangeService = new MobileOrange();
 		Services MobileVodafoneService = new MobileVodafone();
 		Services MobileEtisalatService = new MobileEtisalat();
+		
 		AllServices.add(MobileWeService);
 		AllServices.add(MobileOrangeService);
 		AllServices.add(MobileVodafoneService);
@@ -64,6 +66,7 @@ public class MainClass {
 				{
 					UserService ThisUserService =new SubscribeService(user);
 					ThisUserService.execute();
+					
 
 
 		}
