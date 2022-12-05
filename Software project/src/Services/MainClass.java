@@ -13,7 +13,7 @@ import User.User;
 import User.Register;
 import User.IAdmin;
 import User.Admin;
-
+import User.Search;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -52,13 +52,13 @@ public class MainClass {
 		IAdmin Admin = new Admin();
 		Admin.addUser(user1);
 		Admin.addUser(A);
-		Scanner sc = new Scanner(System.in);
-		String name = sc.nextLine();
-		String mail = sc.nextLine();
-		String pass = sc.nextLine();
-		User user = new User(mail,pass,name);
-		Admin.addUser(user);
-		Admin.printUsers();
+//		Scanner sc = new Scanner(System.in);
+//		String name = sc.nextLine();
+//		String mail = sc.nextLine();
+//		String pass = sc.nextLine();
+//		User user = new User(mail,pass,name);
+//		Admin.addUser(user);
+//		Admin.printUsers();
 
 		((MobileWE) s).MyHandler.GetInformation(user1);
 		((MobileWE) s).MyHandler.PrintForm();
@@ -89,6 +89,8 @@ public class MainClass {
 		double sum = d2.pay();
 		payment.UpdateAmount(sum);
 		System.out.println(credit.getAmount());
+		Search search = new Search();
+		search.execute();
 
 
 	}
