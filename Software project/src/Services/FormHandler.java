@@ -9,7 +9,7 @@ public class FormHandler implements IFormHandler {
     Services obj;
     String[] Titles = {"First name", "Last Name", " Mobile Number" , "Address"};
 
-    FormHandler(Services obj)
+    public FormHandler(Services obj)
     {this.obj = obj; }
 
     public void FormUser(ArrayList<String> Form, IUser user)
@@ -33,6 +33,7 @@ public class FormHandler implements IFormHandler {
 
     public void GetInformation(IUser user)
     {
+        obj.description();
         Scanner sc = new Scanner(System.in);
         ArrayList<String> form= new ArrayList<String>();
         for(int i=0;i<4;i++) {

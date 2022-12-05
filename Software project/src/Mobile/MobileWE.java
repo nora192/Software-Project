@@ -10,10 +10,10 @@ import java.util.ArrayList;
 
 public class MobileWE implements Mobile{
 
-	String name;
+	String name = "Mobile We";
 	ArrayList<IUser > UsersList = new ArrayList< IUser>();
 	ArrayList<ArrayList<String>> FormList = new ArrayList <ArrayList<String>>();
-	public double price = 0;
+	public double price = 500;
 	public Payment p;
 	public IFormHandler MyHandler;
 	public void setHandler(IFormHandler Handler)
@@ -24,6 +24,8 @@ public class MobileWE implements Mobile{
 		this.name = name;
 		this.price = price;
 	}
+	public MobileWE()
+	{}
 
 	public void setPayment(Payment p) {
 		this.p = p;

@@ -10,7 +10,6 @@ public class Admin implements IAdmin{
     public void addUser(IUser obj){
         Register reg = new Register(obj);
         reg.execute();
-
     }
     public void checkRefunds(){
         if(!refundRequests.isEmpty()){
