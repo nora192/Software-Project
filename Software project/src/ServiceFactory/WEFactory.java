@@ -17,7 +17,7 @@ public class WEFactory implements ServiceFactory {
 
 	public Mobile createProductInternet() {
 		// TODO Auto-generated method stub
-		return new MobileWE(name, price);
+		return new MobileWE();
 	}
 
 	public Internet createProductMobile() {

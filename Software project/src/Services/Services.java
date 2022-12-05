@@ -13,9 +13,16 @@ public interface Services {
 	public double pay();
 	ArrayList<IUser> UsersList = new ArrayList< IUser>();
 	ArrayList<ArrayList<String>> FormList = new ArrayList <ArrayList<String>>();
-	FormHandler MyHandler = null;
+	IFormHandler MyHandler =null;
+	
 	public String description();
 
 
 	void setHandler(IFormHandler hn);
+
+
+	public void setPayment(Payment payment2);
+
+
+	public String getName();
 }

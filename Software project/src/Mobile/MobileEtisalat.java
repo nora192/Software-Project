@@ -12,16 +12,17 @@ public class MobileEtisalat implements Mobile {
 	public double price = 250;
 	public Payment p;
 	public IFormHandler MyHandler;
+	
 	public void setHandler(IFormHandler Handler)
 	{
 		this.MyHandler = Handler;
 	}
 
-
-	public MobileEtisalat(String name, double price) {
-		this.ServiceName = ServiceName;
-		this.price = price;
+	public String getName() {
+		// TODO Auto-generated method stub
+		return name;
 	}
+	
 	public MobileEtisalat(){}
 
 	public void setPayment(Payment p) {

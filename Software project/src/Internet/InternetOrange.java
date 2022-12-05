@@ -14,12 +14,17 @@ public class InternetOrange implements Internet {
 		this.MyHandler = Handler;
 	}
 
-
+	
+	public String getName() {
+		// TODO Auto-generated method stub
+		return name;
+	}
+	
 	public InternetOrange(String name, double price) {
 		this.name = name;
 		this.price = price;
 	}
-
+	public InternetOrange(){}
 
 	public double pay() {
 		return p.pay(price); 

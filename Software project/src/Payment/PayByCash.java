@@ -9,6 +9,7 @@ public class PayByCash implements Payment{
 	}
 	
 	public double pay(double amount) {
+		System.out.println(amount + "paid amount: ");
 		return amount;
 	}
 

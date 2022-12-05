@@ -10,14 +10,13 @@ public class EtisalatFactory implements ServiceFactory {
 	public String name;
 	public double price;
 	
-	public EtisalatFactory(String name, double price) {
-		this.name = name;
-		this.price = price;
+	public EtisalatFactory() {
+		
 	}
 
 	public Mobile createProductInternet() {
 		// TODO Auto-generated method stub
-		return (Mobile) new MobileEtisalat(name, price);
+		return (Mobile) new MobileEtisalat();
 	}
 
 	public Internet createProductMobile() {

@@ -18,6 +18,7 @@ public class PayByCard implements Payment,UpdatedPayment{
 
 		if(credit.getAmount() >= amount){
 			//credit.decrement(amount);
+			System.out.println(amount + "paid amount: ");
 			return amount;
 		}
 		else

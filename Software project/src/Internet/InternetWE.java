@@ -9,19 +9,23 @@ public class InternetWE implements Internet {
 	public double price = 0;
 	public Payment p = null;
 	public IFormHandler MyHandler;
+	
 	public void setHandler(IFormHandler Handler)
 	{
 		this.MyHandler = Handler;
 	}
 
-
+	public String getName() {
+		// TODO Auto-generated method stub
+		return name;
+	}
 
 
 	public InternetWE(String name, double price) {
 		this.name = name;
 		this.price = price;
 	}
-
+public InternetWE(){}
 
 	public double pay() {
 		return p.pay(price); 

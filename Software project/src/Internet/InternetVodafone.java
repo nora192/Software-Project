@@ -19,7 +19,14 @@ public class InternetVodafone implements Internet {
 		this.name = name;
 		this.price = price;
 	}
-
+	
+	public String getName() {
+		// TODO Auto-generated method stub
+		return name;
+	}
+	
+	public InternetVodafone()
+{}
 
 	public double pay() {
 		return p.pay(price); 

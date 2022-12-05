@@ -21,6 +21,11 @@ public class MobileVodafone implements Mobile {
 		this.ServiceName = ServiceName;
 		this.price = price;
 	}
+	
+	public String getName() {
+		// TODO Auto-generated method stub
+		return name;
+	}
 	public MobileVodafone(){}
 
 

@@ -5,6 +5,7 @@ public class PayByWallet implements Payment,UpdatedPayment{
 	
 	public double pay(double amount) {
 		if(wallet.getAmount() >= amount){
+			System.out.println(amount + "paid amount: ");
 			return amount;
 		}
 		else {

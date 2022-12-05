@@ -16,7 +16,15 @@ public class Monthly implements Landline {
 		this.name = name;
 		this.price = price;
 	}
+	
+	public String getName() {
+		// TODO Auto-generated method stub
+		return name;
+	}
+	public Monthly(){};
+	
 	public IFormHandler MyHandler;
+	
 	public void setHandler(IFormHandler Handler)
 	{
 		this.MyHandler = Handler;
