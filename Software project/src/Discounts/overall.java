@@ -20,7 +20,9 @@ public class overall implements Discounts_Decorator {
 				return service.pay() * (DiscountAmount / 100);
 	}
 
-	
+
+
+
 	public String description() {
 		return null;
 	}

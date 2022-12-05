@@ -51,25 +51,25 @@ public class SubscribeService implements UserService{
                 if(num==0){
                 	((MobileWE) AllServices.get(num)).MyHandler.GetInformation(this.user);
                 	chosenService = (MobileWE) AllServices.get(num);
-                }
-                	
-                
+                }        
+
                 if(num==1){
+
                     ((MobileOrange) AllServices.get(num)).MyHandler.GetInformation(this.user); 
                     chosenService = (MobileOrange) AllServices.get(num);
                 }
-                
+
                 if(num==2){
+
                     ((MobileVodafone) AllServices.get(num)).MyHandler.GetInformation(this.user);  
                     chosenService = (MobileVodafone) AllServices.get(num);
                 }
-                
+
                 if(num==3){
                     ((MobileEtisalat) AllServices.get(num)).MyHandler.GetInformation(this.user);
+
                     chosenService = (MobileEtisalat) AllServices.get(num);
                 }
-
-
             }
             if(num == 2)
             {
@@ -83,12 +83,13 @@ public class SubscribeService implements UserService{
                     ((InternetWE) AllServices.get(num)).MyHandler.GetInformation(this.user);
                     chosenService = (InternetWE) AllServices.get(num);
                 }
-                
+ 
+
                 if(num==5){
                     ((InternetOrange) AllServices.get(num)).MyHandler.GetInformation(this.user);
                     chosenService = (InternetOrange) AllServices.get(num);
                 }
-                
+                   
                 if(num==6){
                     ((InternetVodafone) AllServices.get(num)).MyHandler.GetInformation(this.user);
                     chosenService = (InternetVodafone) AllServices.get(num);
@@ -96,10 +97,12 @@ public class SubscribeService implements UserService{
                 
                 if(num==7){
                     ((InternetEtisalat) AllServices.get(num)).MyHandler.GetInformation(this.user);
+
                     chosenService = (InternetEtisalat) AllServices.get(num);
                  }
-
+                  
             }
+            
             if(num == 3)
             {    
             	System.out.println("Enter\n ( 8 ) for Monthly Service \n ( 9 ) for Quarter Service :");
@@ -113,10 +116,12 @@ public class SubscribeService implements UserService{
                     chosenService = (Monthly) AllServices.get(num);
                  }
                 
+                    
                 if(num==9){
                     ((Quarter) AllServices.get(num)).MyHandler.GetInformation(this.user);
                     chosenService = (Quarter) AllServices.get(num);
                 }
+                    
 
             }
             if(num == 4)
@@ -131,21 +136,25 @@ public class SubscribeService implements UserService{
                     ((School) AllServices.get(num)).MyHandler.GetInformation(this.user);
                     chosenService = (School) AllServices.get(num);
                 }
-                
+
+                   
                 if(num==11){
                     ((CancerHospitals) AllServices.get(num)).MyHandler.GetInformation(this.user);
                     chosenService = (CancerHospitals) AllServices.get(num);
-                 }
-                
+                }
+                   
                 if(num==12)
                 {
                     ((NGOs) AllServices.get(num)).MyHandler.GetInformation(this.user);
                     chosenService = (NGOs) AllServices.get(num);
-                   
+
                 }
+              }
 
 
-            }
+              
+              
+              
 
 
 

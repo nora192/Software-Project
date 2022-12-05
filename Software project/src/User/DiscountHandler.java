@@ -8,6 +8,7 @@ import Discounts.overall;
 import Discounts.specific;
 
 public class DiscountHandler implements IAdmin{
+
 	
 	public Discounts_Decorator addDiscount(){
     	
@@ -43,6 +44,7 @@ public class DiscountHandler implements IAdmin{
 			return discount;
     	
     }
+
 
 
 

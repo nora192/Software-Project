@@ -7,20 +7,16 @@ import Services.IFormHandler;
 
 public class Monthly implements Landline {
 
-	public String name = "";
-	public double price = 0;
+	public String name = "Monthly";
+	public double price = 800;
 	public Payment p = null;
 
-
-	public Monthly(String name, double price) {
-		this.name = name;
-		this.price = price;
-	}
 	
 	public String getName() {
 		// TODO Auto-generated method stub
 		return name;
 	}
+	
 	public Monthly(){};
 	
 	public IFormHandler MyHandler;
@@ -40,7 +36,9 @@ public class Monthly implements Landline {
 		// TODO Auto-generated method stub
 		return "welcome to the services of " + this.name; 
 	}
-	
+
+
+
 	public void setPayment(Payment p) {
 		this.p = p;
 	}

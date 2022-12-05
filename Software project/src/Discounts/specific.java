@@ -19,7 +19,8 @@ public class specific implements Discounts_Decorator {
 		return service.pay() * (DiscountAmount / 100);
 	}
 
-	
+
+
 	public String description() {
 		return null;
 	}
@@ -38,6 +39,8 @@ public class specific implements Discounts_Decorator {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
 
 
 }

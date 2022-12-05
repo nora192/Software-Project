@@ -10,25 +10,23 @@ public class MobileOrange implements Mobile {
 	String ServiceName = "MobileOrange";
 	public double price = 300;
 	public Payment p;
+
 	public IFormHandler MyHandler;
 	public void setHandler(IFormHandler Handler)
 	{
 		this.MyHandler = Handler;
 	}
-	public MobileOrange(String name, double price) {
-		this.ServiceName = ServiceName;
-		this.price = price;
-	}
-	
+
+
 	public String getName() {
-		// TODO Auto-generated method stub
-		return name;
+		return this.ServiceName;
 	}
-	
+
 	public MobileOrange(){}
+	
 	public String description() {
 		// TODO Auto-generated method stub
-		return "welcome to the services of " + this.name; 
+		return "welcome to the services of " + this.ServiceName;
 	}
 	public void setPayment(Payment p) {
 		this.p = p;

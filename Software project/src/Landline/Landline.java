@@ -10,6 +10,7 @@ public interface Landline extends Services {
 	public void setPayment (Payment p);
 	public void setHandler(IFormHandler Handler);
 	public String description ();
+	public String getName();
 	public double pay();
 
 }

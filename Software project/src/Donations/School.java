@@ -27,8 +27,9 @@ public class School implements Donations {
 		// TODO Auto-generated method stub
 		return name;
 	}
-public School()
-{}
+	
+	public School()
+	{}
 
 	public double pay() {
 		return p.pay(price); 
@@ -39,7 +40,9 @@ public School()
 		// TODO Auto-generated method stub
 		return "welcome to the services of " + this.name; 
 	}
-	
+
+
+
 	public void setPayment(Payment p) {
 		this.p = p;
 	}

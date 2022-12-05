@@ -7,8 +7,7 @@ import User.IUser;
 
 public class MobileEtisalat implements Mobile {
 
-	String ServiceName = "MobileEtisalat";
-	IUser user;
+	String ServiceName = "Mobile Etisalat";
 	public double price = 250;
 	public Payment p;
 	public IFormHandler MyHandler;
@@ -18,10 +17,12 @@ public class MobileEtisalat implements Mobile {
 		this.MyHandler = Handler;
 	}
 
+
 	public String getName() {
-		// TODO Auto-generated method stub
-		return name;
+		return this.ServiceName;
 	}
+
+
 	
 	public MobileEtisalat(){}
 
@@ -36,7 +37,7 @@ public class MobileEtisalat implements Mobile {
 
 	public String description() {
 		// TODO Auto-generated method stub
-		return "welcome to the services of " + this.name;
+		return "welcome to the services of " + this.ServiceName;
 	}
 
 

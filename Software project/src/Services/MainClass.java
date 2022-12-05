@@ -18,6 +18,7 @@ import User.SubscribeService;
 import User.UserService;
 import User.IAdmin;
 import User.Admin;
+import User.DiscountHandler;
 
 import java.security.Provider.Service;
 import java.util.ArrayList;
@@ -28,8 +29,10 @@ public class MainClass {
 		public static ArrayList<Services> AllServices = new ArrayList<Services>();
 	
 		public static Object chosenService;
+		
 		public static void main(String[] args) {
 		
+
 		Services MobileWeService = new MobileWE();
 		Services MobileOrangeService = new MobileOrange();
 		Services MobileVodafoneService = new MobileVodafone();
@@ -83,6 +86,14 @@ public class MainClass {
 		if(choice == 1)
 		{
 			
+			System.out.println("enter what you want to do:");
+			System.out.println("1-add discount");
+			int adminChoice = sc.nextInt();
+			
+			if(adminChoice == 1){
+				DiscountHandler dh = new DiscountHandler();
+				dh.addDiscount();
+			}
 		}
 		
 		if (choice == 2)

@@ -5,9 +5,6 @@ import java.util.Scanner;
 
 public class RefundHandling implements IAdmin {
 	
-//    public static ArrayList<IUser>users = new ArrayList<IUser>();
-//    public static ArrayList<RefundsRequests> refundRequests = new ArrayList<RefundsRequests>();
-	
 
     public void checkRefunds(){
         if(!refundRequests.isEmpty()){

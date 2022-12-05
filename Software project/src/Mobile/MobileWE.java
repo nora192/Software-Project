@@ -10,9 +10,8 @@ import java.util.ArrayList;
 
 public class MobileWE implements Mobile{
 
-	String name = "Mobile We";
-	ArrayList<IUser > UsersList = new ArrayList< IUser>();
-	ArrayList<ArrayList<String>> FormList = new ArrayList <ArrayList<String>>();
+	String ServiceName = "Mobile We";
+
 	public double price = 500;
 	
 	public Payment p;
@@ -22,12 +21,13 @@ public class MobileWE implements Mobile{
 	{
 		this.MyHandler = Handler;
 	}
+
 	
 	public String getName() {
 		// TODO Auto-generated method stub
-		return name;
+		return ServiceName;
+
 	}
-	
 	
 	public MobileWE()
 	{}
@@ -43,7 +43,7 @@ public class MobileWE implements Mobile{
 	}
 
 	public String description() {
-		return "welcome to the services of " + this.name; 
+		return "welcome to the services of " + this.ServiceName;
 	}
 	
 
