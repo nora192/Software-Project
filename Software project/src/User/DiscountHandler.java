@@ -21,6 +21,7 @@ public class DiscountHandler implements IAdmin{
 		
 		System.out.println("1-overall \n 2-specific");
 		int discChoice = sc.nextInt();
+		
 		if(discChoice == 1){
 				discount = new overall(discount, discAmount);
 				
