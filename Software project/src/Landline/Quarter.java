@@ -8,7 +8,7 @@ import Services.IFormHandler;
 public class Quarter implements Landline {
 
 	public String name = "Quarter Service";
-	public double price = 800;
+	public double price = 600;
 	public Payment p = null;
 	public IFormHandler MyHandler;
 	public void setHandler(IFormHandler Handler)

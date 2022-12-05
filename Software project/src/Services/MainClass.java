@@ -10,6 +10,7 @@ import Landline.Monthly;
 import Landline.Quarter;
 import Mobile.*;
 import Payment.*;
+import User.AddUser;
 import User.AddWalletFunds;
 import User.IUser;
 import User.User;
@@ -26,10 +27,12 @@ public class MainClass {
 	public static ArrayList<Services> AllServices = new ArrayList<Services>();
 
 	public static void main(String[] args) {
+
 		Services MobileWeService = new MobileWE();
 		Services MobileOrangeService = new MobileOrange();
 		Services MobileVodafoneService = new MobileVodafone();
 		Services MobileEtisalatService = new MobileEtisalat();
+
 		AllServices.add(MobileWeService);
 		AllServices.add(MobileOrangeService);
 		AllServices.add(MobileVodafoneService);
@@ -42,13 +45,17 @@ public class MainClass {
 		AllServices.add(InternetOrangeService);
 		AllServices.add(InternetVodafoneService);
 		AllServices.add(InternetEtisalatService);
+
 		Services MonthlyLandLine =  new Monthly();
 		Services QuarterLandLine = new Quarter();
+
 		AllServices.add(MonthlyLandLine);
 		AllServices.add(QuarterLandLine);
+
 		Services SchoolDonations =  new School();
 		Services CancerHospitals = new CancerHospitals();
 		Services Ngo = new NGOs();
+
 		AllServices.add(SchoolDonations);
 		AllServices.add(CancerHospitals);
 		AllServices.add(Ngo);
@@ -56,7 +63,10 @@ public class MainClass {
 
 
 
-		IAdmin Admin1= new Admin();
+		IAdmin add= new AddUser();
+//		IAdmin Admin1= new Admin();
+//		IAdmin Admin1= new Admin();
+
 		String Email;
 		String PassWord;
 		String UserName;
@@ -78,22 +88,25 @@ public class MainClass {
 			PassWord = sc.next();
 			System.out.println("Enter Your UserName :");
 			UserName = sc.next();
-			IUser user = new User(Email,PassWord,UserName);
-			Admin1.addUser(user);
+
+			IUser user1 = new User(Email,PassWord,UserName);
+			((AddUser) add).addUser(user1);
+
 			int num=1;
+
 			while (num != 0)
 			{
 				System.out.println("Welcome to the system! \n 1- Subscribe to Service ");
 				num = sc.nextInt();
 				if(num == 1)
 				{
-					UserService ThisUserService =new SubscribeService(user);
+					UserService ThisUserService =new SubscribeService(user1);
 					ThisUserService.execute();
 				}
 
 
 
-	}
+			}
 		}
 	}
 }

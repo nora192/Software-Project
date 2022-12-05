@@ -5,8 +5,8 @@ import Services.IFormHandler;
 
 public class InternetVodafone implements Internet {
 
-	public String name = "";
-	public double price = 0;
+	public String name = "Internet Vodafone";
+	public double price = 250;
 	public Payment p = null;
 	public IFormHandler MyHandler;
 	public void setHandler(IFormHandler Handler)

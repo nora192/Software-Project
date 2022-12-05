@@ -17,24 +17,12 @@ public class FormHandler implements IFormHandler {
         obj.UsersList.add(user);
         obj.FormList.add(Form);
     }
-    
-    public void PrintForm()
-    {
-        for(int i = 0; i< obj.UsersList.size(); i++)
-        { System.out.println(obj.UsersList.get(i).email+" "+obj.UsersList.get(i).creditCard);
 
-            for(int j=0;i<obj.FormList.size();i++)
-            {
-                for(int k=0;k<4;k++) {
-                    System.out.println(obj.FormList.get(i).get(k)+" ");
-                }
-            }
-        }
-    }
+
 
     public void GetInformation(IUser user)
     {
-        obj.description();
+        System.out.println(obj.description());
         
         Scanner sc = new Scanner(System.in);
         ArrayList<String> form= new ArrayList<String>();
@@ -46,6 +34,7 @@ public class FormHandler implements IFormHandler {
             form.add(data);
         }
          FormUser(form , user);
+        System.out.println("You subscribed in this Service!");
     }
 
 }

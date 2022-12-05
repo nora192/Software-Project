@@ -42,18 +42,18 @@ public class SubscribeService implements UserService{
                 num = sc.nextInt();
                 IFormHandler hn= new FormHandler(AllServices.get(num));
                 AllServices.get(num).setHandler(hn);
-                if(num==0){
-                ((MobileWE) AllServices.get(num)).MyHandler.GetInformation(this.user);
-                ((MobileWE) AllServices.get(num)).MyHandler.PrintForm();}
+                if(num==0) {
+                    ((MobileWE) AllServices.get(num)).MyHandler.GetInformation(this.user);
+                }
                 if(num==1){
                     ((MobileOrange) AllServices.get(num)).MyHandler.GetInformation(this.user);
-                    ((MobileOrange) AllServices.get(num)).MyHandler.PrintForm();}
+                    }
                 if(num==2){
                     ((MobileVodafone) AllServices.get(num)).MyHandler.GetInformation(this.user);
-                    ((MobileVodafone) AllServices.get(num)).MyHandler.PrintForm();}
+                  }
                 if(num==3){
                     ((MobileEtisalat) AllServices.get(num)).MyHandler.GetInformation(this.user);
-                    ((MobileEtisalat) AllServices.get(num)).MyHandler.PrintForm();}
+                }
 
 
             }
@@ -65,16 +65,16 @@ public class SubscribeService implements UserService{
                 AllServices.get(num).setHandler(hn);
                 if(num==4){
                     ((InternetWE) AllServices.get(num)).MyHandler.GetInformation(this.user);
-                    ((InternetWE) AllServices.get(num)).MyHandler.PrintForm();}
+                   }
                 if(num==5){
                     ((InternetOrange) AllServices.get(num)).MyHandler.GetInformation(this.user);
-                    ((InternetOrange) AllServices.get(num)).MyHandler.PrintForm();}
+                   }
                 if(num==6){
                     ((InternetVodafone) AllServices.get(num)).MyHandler.GetInformation(this.user);
-                    ((InternetVodafone) AllServices.get(num)).MyHandler.PrintForm();}
+                   }
                 if(num==7){
                     ((InternetEtisalat) AllServices.get(num)).MyHandler.GetInformation(this.user);
-                    ((InternetEtisalat) AllServices.get(num)).MyHandler.PrintForm();}
+                  }
 
             }
             if(num == 3)
@@ -84,10 +84,10 @@ public class SubscribeService implements UserService{
                 AllServices.get(num).setHandler(hn);
                 if(num==8){
                     ((Monthly) AllServices.get(num)).MyHandler.GetInformation(this.user);
-                    ((Monthly) AllServices.get(num)).MyHandler.PrintForm();}
+                    }
                 if(num==9){
                     ((Quarter) AllServices.get(num)).MyHandler.GetInformation(this.user);
-                    ((Quarter) AllServices.get(num)).MyHandler.PrintForm();}
+                    }
 
             }
             if(num == 4)
@@ -98,14 +98,14 @@ public class SubscribeService implements UserService{
                 AllServices.get(num).setHandler(hn);
                 if(num==10){
                     ((School) AllServices.get(num)).MyHandler.GetInformation(this.user);
-                    ((School) AllServices.get(num)).MyHandler.PrintForm();}
+                   }
                 if(num==11){
                     ((CancerHospitals) AllServices.get(num)).MyHandler.GetInformation(this.user);
-                    ((CancerHospitals) AllServices.get(num)).MyHandler.PrintForm();}
+                   }
                 if(num==12)
                 {
                     ((NGOs) AllServices.get(num)).MyHandler.GetInformation(this.user);
-                    ((NGOs) AllServices.get(num)).MyHandler.PrintForm();}
+                    }
                 }
 
 

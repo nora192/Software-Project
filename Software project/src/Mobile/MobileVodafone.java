@@ -8,7 +8,7 @@ import User.IUser;
 public class MobileVodafone implements Mobile {
 
 	String ServiceName = "MobileVodafone";
-	IUser user;
+
 	public double price = 400;
 	public Payment p;
 	public IFormHandler MyHandler;

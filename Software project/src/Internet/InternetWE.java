@@ -5,8 +5,8 @@ import Services.IFormHandler;
 
 public class InternetWE implements Internet {
 
-	public String name = "";
-	public double price = 0;
+	public String name = "Internet WE";
+	public double price = 300;
 	public Payment p = null;
 	public IFormHandler MyHandler;
 	public void setHandler(IFormHandler Handler)
