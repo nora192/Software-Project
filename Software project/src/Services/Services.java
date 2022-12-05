@@ -14,6 +14,8 @@ public interface Services {
 	ArrayList<IUser> UsersList = new ArrayList< IUser>();
 	ArrayList<ArrayList<String>> FormList = new ArrayList <ArrayList<String>>();
 	FormHandler MyHandler = null;
+	public String description();
 
 
+	void setHandler(IFormHandler hn);
 }

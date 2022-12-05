@@ -1,8 +1,7 @@
 package Discounts;
 
-import Payment.Payment;
 import Services.Services;
-
+import Services.IFormHandler;
 public class overall implements Discounts_Decorator {
 
 	Services service;
@@ -18,7 +17,14 @@ public class overall implements Discounts_Decorator {
 				return service.pay() * (DiscountAmount / 100);
 			}
 
+	
+	public String description() {
+		return null;
+	}
 
+	public void setHandler(IFormHandler hn) {
+
+	}
 
 
 

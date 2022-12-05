@@ -9,7 +9,7 @@ public class MobileEtisalat implements Mobile {
 
 	String ServiceName = "MobileEtisalat";
 	IUser user;
-	public double price = 0;
+	public double price = 250;
 	public Payment p;
 	public IFormHandler MyHandler;
 	public void setHandler(IFormHandler Handler)
@@ -22,7 +22,7 @@ public class MobileEtisalat implements Mobile {
 		this.ServiceName = ServiceName;
 		this.price = price;
 	}
-
+	public MobileEtisalat(){}
 
 	public void setPayment(Payment p) {
 		this.p = p;
