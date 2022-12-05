@@ -8,7 +8,6 @@ public class Refund implements UserService {
 	public Refund(int id){
 		this.id = id;
 	}
-
 	public void execute() {
 		if(flag){
 			if(refundRequests.get(id).user.creditCard==null){
@@ -25,9 +24,7 @@ public class Refund implements UserService {
 		refundRequests.remove(0);
 
 	}
-
-
-	public void setRespond (boolean respond){
+	void setRespond (boolean respond){
 		this.flag = respond;
 	}
 	public void getRespond(boolean respond){

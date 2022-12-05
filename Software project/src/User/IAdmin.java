@@ -1,6 +1,7 @@
 package User;
 
 public interface IAdmin {
-    void addUser(IUser obj);
-    void checkRefunds();
+    public void addUser(IUser obj);
+    public void checkRefunds();
+    public void printUsers();
 }
