@@ -21,7 +21,7 @@ public class InternetWE implements Internet {
 		this.name = name;
 		this.price = price;
 	}
-
+public InternetWE(){}
 
 	public double pay() {
 		return p.pay(price); 

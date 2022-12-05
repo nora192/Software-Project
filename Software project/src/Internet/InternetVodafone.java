@@ -19,7 +19,8 @@ public class InternetVodafone implements Internet {
 		this.name = name;
 		this.price = price;
 	}
-
+public InternetVodafone()
+{}
 
 	public double pay() {
 		return p.pay(price); 

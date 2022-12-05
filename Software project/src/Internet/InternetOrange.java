@@ -19,7 +19,7 @@ public class InternetOrange implements Internet {
 		this.name = name;
 		this.price = price;
 	}
-
+	public InternetOrange(){}
 
 	public double pay() {
 		return p.pay(price); 

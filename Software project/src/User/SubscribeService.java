@@ -2,14 +2,29 @@ package User;
 
 import java.util.Scanner;
 
+import Donations.CancerHospitals;
+import Donations.NGOs;
+import Donations.School;
+import Landline.Monthly;
+import Landline.Quarter;
+import Mobile.Mobile;
 import static Services.MainClass.AllServices;
 
+import Mobile.MobileWE;
 import Services.FormHandler;
 import Services.IFormHandler;
+import Mobile.MobileOrange;
+import Mobile.MobileVodafone;
+import Mobile.MobileEtisalat;
+import Internet.InternetEtisalat;
+import Internet.InternetWE;
+import Internet.InternetOrange;
+import Internet.InternetVodafone;
 import User.IUser;
 
 public class SubscribeService implements UserService{
     IUser user;
+
     public SubscribeService(IUser user)
     {
         this.user= user;
@@ -25,38 +40,80 @@ public class SubscribeService implements UserService{
             {
                 System.out.println("Enter\n ( 0 ) for Mobile We Service \n ( 1 ) for Mobile Orange Service \n ( 2 ) for Mobile Vodafone Service \n ( 3 ) for Mobile Etisalat service :");
                 num = sc.nextInt();
-                    IFormHandler hn= new FormHandler(AllServices.get(num));
-                    AllServices.get(num).setHandler(hn);
-                    AllServices.get(num).MyHandler.GetInformation(this.user);
-                    AllServices.get(num).MyHandler.PrintForm();
+                IFormHandler hn= new FormHandler(AllServices.get(num));
+                AllServices.get(num).setHandler(hn);
+                if(num==0){
+                ((MobileWE) AllServices.get(num)).MyHandler.GetInformation(this.user);
+                ((MobileWE) AllServices.get(num)).MyHandler.PrintForm();}
+                if(num==1){
+                    ((MobileOrange) AllServices.get(num)).MyHandler.GetInformation(this.user);
+                    ((MobileOrange) AllServices.get(num)).MyHandler.PrintForm();}
+                if(num==2){
+                    ((MobileVodafone) AllServices.get(num)).MyHandler.GetInformation(this.user);
+                    ((MobileVodafone) AllServices.get(num)).MyHandler.PrintForm();}
+                if(num==3){
+                    ((MobileEtisalat) AllServices.get(num)).MyHandler.GetInformation(this.user);
+                    ((MobileEtisalat) AllServices.get(num)).MyHandler.PrintForm();}
+
 
             }
             if(num == 2)
             {
                 System.out.println("Enter\n ( 4 ) for Internet We Service \n ( 5 ) for Internet Orange Service \n ( 6 ) for Internet Vodafone Service \n ( 7 ) for Internet Etisalat service :");
                 num = sc.nextInt();
-                AllServices.get(num).MyHandler.GetInformation(this.user);
-                AllServices.get(num).MyHandler.PrintForm();
+                IFormHandler hn= new FormHandler(AllServices.get(num));
+                AllServices.get(num).setHandler(hn);
+                if(num==4){
+                    ((InternetWE) AllServices.get(num)).MyHandler.GetInformation(this.user);
+                    ((InternetWE) AllServices.get(num)).MyHandler.PrintForm();}
+                if(num==5){
+                    ((InternetOrange) AllServices.get(num)).MyHandler.GetInformation(this.user);
+                    ((InternetOrange) AllServices.get(num)).MyHandler.PrintForm();}
+                if(num==6){
+                    ((InternetVodafone) AllServices.get(num)).MyHandler.GetInformation(this.user);
+                    ((InternetVodafone) AllServices.get(num)).MyHandler.PrintForm();}
+                if(num==7){
+                    ((InternetEtisalat) AllServices.get(num)).MyHandler.GetInformation(this.user);
+                    ((InternetEtisalat) AllServices.get(num)).MyHandler.PrintForm();}
 
             }
             if(num == 3)
             {     System.out.println("Enter\n ( 8 ) for Monthly Service \n ( 9 ) for Quarter Service :");
                 num = sc.nextInt();
-                AllServices.get(num).MyHandler.GetInformation(this.user);
-                AllServices.get(num).MyHandler.PrintForm();
+                IFormHandler hn= new FormHandler(AllServices.get(num));
+                AllServices.get(num).setHandler(hn);
+                if(num==8){
+                    ((Monthly) AllServices.get(num)).MyHandler.GetInformation(this.user);
+                    ((Monthly) AllServices.get(num)).MyHandler.PrintForm();}
+                if(num==9){
+                    ((Quarter) AllServices.get(num)).MyHandler.GetInformation(this.user);
+                    ((Quarter) AllServices.get(num)).MyHandler.PrintForm();}
 
             }
             if(num == 4)
             {
                 System.out.println("Enter\n ( 10 ) for School Donations \n ( 11 ) for Cancer Hospitals Donations \n ( 12 ) for NGOs Donations :");
                 num = sc.nextInt();
-                AllServices.get(num).MyHandler.GetInformation(this.user);
-                AllServices.get(num).MyHandler.PrintForm();
+                IFormHandler hn= new FormHandler(AllServices.get(num));
+                AllServices.get(num).setHandler(hn);
+                if(num==10){
+                    ((School) AllServices.get(num)).MyHandler.GetInformation(this.user);
+                    ((School) AllServices.get(num)).MyHandler.PrintForm();}
+                if(num==11){
+                    ((CancerHospitals) AllServices.get(num)).MyHandler.GetInformation(this.user);
+                    ((CancerHospitals) AllServices.get(num)).MyHandler.PrintForm();}
+                if(num==12)
+                {
+                    ((NGOs) AllServices.get(num)).MyHandler.GetInformation(this.user);
+                    ((NGOs) AllServices.get(num)).MyHandler.PrintForm();}
+                }
+
+
 
             }
 
 
 
 
-    }
+
 }

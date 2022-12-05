@@ -13,7 +13,7 @@ public interface Services {
 	public double pay();
 	ArrayList<IUser> UsersList = new ArrayList< IUser>();
 	ArrayList<ArrayList<String>> FormList = new ArrayList <ArrayList<String>>();
-	FormHandler MyHandler = null;
+	IFormHandler MyHandler =null;
 	public String description();
 
 

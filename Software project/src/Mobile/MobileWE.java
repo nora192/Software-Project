@@ -16,6 +16,7 @@ public class MobileWE implements Mobile{
 	public double price = 500;
 	public Payment p;
 	public IFormHandler MyHandler;
+
 	public void setHandler(IFormHandler Handler)
 	{
 		this.MyHandler = Handler;

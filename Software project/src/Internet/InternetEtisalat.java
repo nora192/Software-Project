@@ -20,6 +20,7 @@ public class InternetEtisalat implements Internet {
 		this.name = name;
 		this.price = price;
 	}
+	public InternetEtisalat(){}
 	
 	public double pay() {
 		return p.pay(price); 

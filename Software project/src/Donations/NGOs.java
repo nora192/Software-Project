@@ -7,8 +7,8 @@ import Services.IFormHandler;
 
 public class NGOs implements Donations {
 
-	public String name = "";
-	public double price = 0;
+	public String name = "NGO Donations";
+	public double price = 190;
 	public Payment p = null;
 	public IFormHandler MyHandler;
 	public void setHandler(IFormHandler Handler)
@@ -22,7 +22,8 @@ public class NGOs implements Donations {
 		this.name = name;
 		this.price = price;
 	}
-
+public NGOs()
+{}
 
 	public double pay() {
 		return p.pay(price); 

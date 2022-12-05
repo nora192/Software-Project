@@ -16,6 +16,7 @@ public class Monthly implements Landline {
 		this.name = name;
 		this.price = price;
 	}
+	public Monthly(){};
 	public IFormHandler MyHandler;
 	public void setHandler(IFormHandler Handler)
 	{
