@@ -12,6 +12,7 @@ public interface Services {
 	ArrayList<IUser> UsersList = new ArrayList< IUser>();
 	ArrayList<ArrayList<String>> FormList = new ArrayList <ArrayList<String>>();
 	IFormHandler MyHandler =null;
+	public double price = 0;
 
 	public String description();
 

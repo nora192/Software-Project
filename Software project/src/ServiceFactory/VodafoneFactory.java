@@ -20,7 +20,7 @@ public class VodafoneFactory implements ServiceFactory {
 
 	public Mobile createProductInternet() {
 		// TODO Auto-generated method stub
-		return new MobileVodafone(name, price);	
+		return new MobileVodafone();	
 	}
 
 	public Internet createProductMobile() {

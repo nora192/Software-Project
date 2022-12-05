@@ -16,7 +16,7 @@ public class OrangeFactory implements ServiceFactory {
 	}
 	
 	public Mobile createProductInternet() {
-		return new MobileOrange(name, price);
+		return new MobileOrange();
 	}
 
 	public Internet createProductMobile() {

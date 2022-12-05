@@ -51,24 +51,27 @@ public class SubscribeService implements UserService{
                 if(num==0){
                 	((MobileWE) AllServices.get(num)).MyHandler.GetInformation(this.user);
                 	chosenService = (MobileWE) AllServices.get(num);
+                	((MobileWE) chosenService).description();
                 }        
 
                 if(num==1){
 
                     ((MobileOrange) AllServices.get(num)).MyHandler.GetInformation(this.user); 
                     chosenService = (MobileOrange) AllServices.get(num);
+                    ((MobileOrange) chosenService).description();
                 }
 
                 if(num==2){
 
                     ((MobileVodafone) AllServices.get(num)).MyHandler.GetInformation(this.user);  
                     chosenService = (MobileVodafone) AllServices.get(num);
+                    ((MobileVodafone) chosenService).description();
                 }
 
                 if(num==3){
                     ((MobileEtisalat) AllServices.get(num)).MyHandler.GetInformation(this.user);
-
                     chosenService = (MobileEtisalat) AllServices.get(num);
+                    ((MobileEtisalat) chosenService).description();
                 }
             }
             if(num == 2)
@@ -82,23 +85,27 @@ public class SubscribeService implements UserService{
                 if(num==4){
                     ((InternetWE) AllServices.get(num)).MyHandler.GetInformation(this.user);
                     chosenService = (InternetWE) AllServices.get(num);
+                    ((InternetWE) chosenService).description();
                 }
  
 
                 if(num==5){
                     ((InternetOrange) AllServices.get(num)).MyHandler.GetInformation(this.user);
                     chosenService = (InternetOrange) AllServices.get(num);
+                    ((InternetOrange) chosenService).description();
                 }
                    
                 if(num==6){
                     ((InternetVodafone) AllServices.get(num)).MyHandler.GetInformation(this.user);
                     chosenService = (InternetVodafone) AllServices.get(num);
+                    ((InternetVodafone) chosenService).description();
                  }
                 
                 if(num==7){
                     ((InternetEtisalat) AllServices.get(num)).MyHandler.GetInformation(this.user);
 
                     chosenService = (InternetEtisalat) AllServices.get(num);
+                    ((InternetEtisalat) chosenService).description();
                  }
                   
             }
@@ -114,12 +121,14 @@ public class SubscribeService implements UserService{
                 if(num==8){
                     ((Monthly) AllServices.get(num)).MyHandler.GetInformation(this.user);
                     chosenService = (Monthly) AllServices.get(num);
+                    ((Monthly) chosenService).description();
                  }
                 
                     
                 if(num==9){
                     ((Quarter) AllServices.get(num)).MyHandler.GetInformation(this.user);
                     chosenService = (Quarter) AllServices.get(num);
+                    ((Quarter) chosenService).description();
                 }
                     
 
@@ -135,18 +144,21 @@ public class SubscribeService implements UserService{
                 if(num==10){
                     ((School) AllServices.get(num)).MyHandler.GetInformation(this.user);
                     chosenService = (School) AllServices.get(num);
+                    ((School) chosenService).description();
                 }
 
                    
                 if(num==11){
                     ((CancerHospitals) AllServices.get(num)).MyHandler.GetInformation(this.user);
                     chosenService = (CancerHospitals) AllServices.get(num);
+                    ((CancerHospitals) chosenService).description();
                 }
                    
                 if(num==12)
                 {
                     ((NGOs) AllServices.get(num)).MyHandler.GetInformation(this.user);
                     chosenService = (NGOs) AllServices.get(num);
+                    ((NGOs) chosenService).description();
 
                 }
               }

@@ -16,10 +16,11 @@ public class specific implements Discounts_Decorator {
 
 
 	public double pay() {
-		return service.pay() * (DiscountAmount / 100);
-	}
-
-
+		double pay = service.pay() * (DiscountAmount / 100);
+		System.out.println("Paid amount after discount: " + pay + "\n");
+		
+		return pay;
+}
 
 	public String description() {
 		return null;

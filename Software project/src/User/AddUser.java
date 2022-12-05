@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class AddUser implements IAdmin {
 	
-//  public static ArrayList<IUser>users = new ArrayList<IUser>();
   
     public void addUser(IUser obj){
         Register reg = new Register(obj);

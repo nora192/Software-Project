@@ -10,6 +10,7 @@ public class MobileVodafone implements Mobile {
 	String ServiceName = "MobileVodafone";
 
 	public double price = 400;
+	
 	public Payment p;
 	public IFormHandler MyHandler;
 	public void setHandler(IFormHandler Handler)

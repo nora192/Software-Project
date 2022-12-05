@@ -18,11 +18,11 @@ public class PayByCard implements Payment,UpdatedPayment{
 
 		if(credit.getAmount() >= amount){
 			//credit.decrement(amount);
-			System.out.println(amount + "paid amount: ");
+			System.out.println("Paid amount before discount: " + amount);
 			return amount;
 		}
 		else
-			System.out.println("No enough money in your credit card.");
+			System.out.println("No enough money in your credit card.\n");
 		
 		return 0;
 

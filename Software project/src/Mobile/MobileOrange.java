@@ -26,7 +26,7 @@ public class MobileOrange implements Mobile {
 	
 	public String description() {
 		// TODO Auto-generated method stub
-		return "welcome to the services of " + this.ServiceName;
+		return "welcome to the services of " + this.ServiceName + "\n";
 	}
 	public void setPayment(Payment p) {
 		this.p = p;

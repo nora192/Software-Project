@@ -20,22 +20,27 @@ public class DiscountHandler implements IAdmin{
 		
     	int discAmount = sc.nextInt();
 		
-		System.out.println("1-overall \n 2-specific");
+		System.out.println("1-overall \n2-specific");
 		int discChoice = sc.nextInt();
 		
 		if(discChoice == 1){
 				discount = new overall(discount, discAmount);
-				
+				System.out.println("A discount of " + discAmount + " is applied on all services \n");
 			}
 			
-			else if(discChoice == 2){
+		else if(discChoice == 2){
+				System.out.println("Please choose a service to apply the discount upon '\n");
 				
 				for (int i=0; i< AllServices.size(); i++){
-					System.out.println(i+" "+ AllServices.get(i).getName());
+					
+					System.out.println(i+1 +" "+ AllServices.get(i).getName());
 				}
+				
 				int seviceChoice = sc.nextInt();
 				
 				discount = new specific(AllServices.get(seviceChoice), discAmount);
+				
+				System.out.println("A discount of " + discAmount + " is applied on " + AllServices.get(seviceChoice).getName() + "\n" );
 			}
 			else{
 				System.out.println("wrong input");
