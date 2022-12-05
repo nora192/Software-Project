@@ -2,6 +2,7 @@ package Internet;
 
 import Payment.Payment;
 import Services.Services;
+import Services.IFormHandler;
 
 public interface Internet extends Services {
 	
@@ -9,6 +10,7 @@ public interface Internet extends Services {
 	public double price = 0;
 	public void setPayment (Payment p);
 	public String description ();
+	public void setHandler(IFormHandler Handler);
 	public double pay();
 
 }

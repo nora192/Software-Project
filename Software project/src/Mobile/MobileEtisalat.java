@@ -2,6 +2,7 @@
 package Mobile;
 
 import Payment.Payment;
+import Services.IFormHandler;
 import User.IUser;
 
 public class MobileEtisalat implements Mobile {
@@ -10,6 +11,11 @@ public class MobileEtisalat implements Mobile {
 	IUser user;
 	public double price = 0;
 	public Payment p;
+	public IFormHandler MyHandler;
+	public void setHandler(IFormHandler Handler)
+	{
+		this.MyHandler = Handler;
+	}
 
 
 	public MobileEtisalat(String name, double price) {

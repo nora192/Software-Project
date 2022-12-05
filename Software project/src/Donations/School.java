@@ -3,12 +3,18 @@ package Donations;
 
 import Internet.Internet;
 import Payment.Payment;
+import Services.IFormHandler;
 
-public class School implements Internet {
+public class School implements Donations {
 
 	public String name = "";
 	public double price = 0;
 	public Payment p = null;
+	public IFormHandler MyHandler;
+	public void setHandler(IFormHandler Handler)
+	{
+		this.MyHandler = Handler;
+	}
 
 
 	public School(String name, double price) {

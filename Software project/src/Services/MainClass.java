@@ -15,22 +15,37 @@ import User.IAdmin;
 import User.Admin;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class MainClass {
 
 	public static void main(String[] args) {
 
 		ArrayList<Services> AllServices=new ArrayList<Services>();
-		Services s = new MobileWE("mobile we", 500);
+
+		Services s = new MobileWE("mobile we", 500 );
+		IFormHandler hn= new FormHandler(s);
+		((MobileWE) s).setHandler(hn);
+
 		Services s2 = new InternetEtisalat("Intrenet Etisalat" , 200);
+		IUser user1 = new User("nada@gmail","l","gf");
+		IcreditCard credit = new CreditCard(user1,"11",1000);
+
+
+
+		((MobileWE) s).MyHandler.GetInformation(user1);
+		((MobileWE) s).MyHandler.PrintForm();
+
+
+//
+//		((MobileWE) s).PrintForm();
 
 		Payment p = new PayByCash("cairo");
 		AllServices.add(s);
 		AllServices.add(s2);
 
 		//System.out.println("hello world maryam");
-		IUser user1 = new User("nada","l","gf");
-		IcreditCard credit = new CreditCard(user1,"11",1000);
+
 		UpdatedPayment payment = new PayByCard(credit);
 		((MobileWE) s).setPayment(payment);
 
@@ -50,70 +65,7 @@ public class MainClass {
 		System.out.println(credit.getAmount());
 
 
-
-		//Discounts_Decorator d2  = new specific(d,50);
-
-		//d.setPayment(payment);
-
-		//double sum = ((MobileWE) s).pay();
-		//payment.UpdateAmount(sum);
-
-		//System.out.println(sum);
-		//System.out.println(credit.getAmount());
-		
-		//at first admin should apply discount either overall(applied to all services)
-		//or specific(applied to a specific services)
-		//if specific;
-	//	Discounts_Decorator d = new specific("MobileWE", 50);
-	//	IUser user1 = new User("nada","l","gf");
-	//	Services ssr = new MobileWE("mobile we ", 350);
-		//set service to a discount
-		//d.setService(ssr);/*
-		//IcreditCard c = new CreditCard(user1,"000",1000);
-		//credit card amount before paying
-		//System.out.println(c.getAmount());
-		//now user user1 credit card has 1000
-//		Payment p = new PayByCard(c);
-		//set payment method to service(pay by card)
-		//ssr.setPayment(p);
-		//apply discount 
-		//d.pay();
-		//after discount.
-		//System.out.println(c.getAmount());
-		
-		//Payment p = new PayByCash("cairo");
-		
-
-		/*System.out.println("hello world maryam");
-		
-		//IcreditCard c = new CreditCard("1","11",1000);
-		//Payment p = new PayByCard(c);
-		
-		ssr.setPayment(p);
-		
-		Discounts_Decorator dd  = new overall(s,0.5);
-		dd.setPayment(p);
-		double su = dd.pay();
-//		payment.updateCredit(sum);
-		
-		System.out.println(su);
-		System.out.println(credit.getAmount());
-		IUser user = new User("kholoud","ll","fgf");
-		Admin admin= new Admin();
-		admin.addUser(user);
-		admin.addUser(user);
-		admin.printUsers();
-		
-		IUser A = new User("aa@gmail", "0000", "aaa");
-		//create a wallet for user A with amount 1000
-		IWallet wallet = new Wallet(A,1000);
-		A.setWallet(wallet);
-		//increment wallet amount of user A by 50
-		AddWalletFunds addfund = new AddWalletFunds(50,A);
-		addfund.execute();
-		
-		System.out.println(A.getWallet().getAmount());*/
-
 	}
 
 }
+

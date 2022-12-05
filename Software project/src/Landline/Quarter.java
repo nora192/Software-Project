@@ -3,12 +3,18 @@ package Landline;
 
 import Internet.Internet;
 import Payment.Payment;
+import Services.IFormHandler;
 
-public class Quarter implements Internet {
+public class Quarter implements Landline {
 
 	public String name = "";
 	public double price = 0;
 	public Payment p = null;
+	public IFormHandler MyHandler;
+	public void setHandler(IFormHandler Handler)
+	{
+		this.MyHandler = Handler;
+	}
 
 	public Quarter(String name, double price) {
 		this.name = name;

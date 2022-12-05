@@ -10,12 +10,6 @@ public class Admin implements IAdmin{
     public void addUser(IUser obj){
         Register reg = new Register(obj);
         reg.execute();
-        /*if(check){
-            System.out.println("User Added Successfully");
-        }
-        else{
-            System.out.println("User Not Added, This Mail Belongs To Another Account");
-        }*/
 
     }
     public void checkRefunds(){
@@ -26,10 +20,7 @@ public class Admin implements IAdmin{
             System.out.println("click \n1-Accept \n2-Reject");
             Scanner sc = new Scanner(System.in);
             respond = sc.nextInt();
-            if(respond==1){
-                flag= true;
-            }
-            else flag = false;
+            flag= respond == 1;
             Refund ref = new Refund(0);
             ref.getRespond(flag);
             ref.execute();

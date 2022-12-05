@@ -3,8 +3,9 @@ package Landline;
 
 import Internet.Internet;
 import Payment.Payment;
+import Services.IFormHandler;
 
-public class Monthly implements Internet {
+public class Monthly implements Landline {
 
 	public String name = "";
 	public double price = 0;
@@ -14,6 +15,11 @@ public class Monthly implements Internet {
 	public Monthly(String name, double price) {
 		this.name = name;
 		this.price = price;
+	}
+	public IFormHandler MyHandler;
+	public void setHandler(IFormHandler Handler)
+	{
+		this.MyHandler = Handler;
 	}
 
 

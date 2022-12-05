@@ -2,17 +2,24 @@
 package Mobile;
 
 import Payment.Payment;
+import Services.IFormHandler;
 import User.IUser;
+import User.User;
 
-public class MobileWE implements Mobile {
+import java.util.ArrayList;
+
+public class MobileWE implements Mobile{
 
 	String name;
-	IUser user;
+	ArrayList<IUser > UsersList = new ArrayList< IUser>();
+	ArrayList<ArrayList<String>> FormList = new ArrayList <ArrayList<String>>();
 	public double price = 0;
 	public Payment p;
-
-
-
+	public IFormHandler MyHandler;
+	public void setHandler(IFormHandler Handler)
+	{
+		this.MyHandler = Handler;
+	}
 	public MobileWE(String name, double price) {
 		this.name = name;
 		this.price = price;
@@ -21,24 +28,16 @@ public class MobileWE implements Mobile {
 	public void setPayment(Payment p) {
 		this.p = p;
 	}
+
 	
 	public double pay() {
 		return p.pay(price );
 	}
 
 	public String description() {
-		// TODO Auto-generated method stub
 		return "welcome to the services of " + this.name; 
 	}
 	
-	public double getPrice(){
-		return price;
-	}
-	public void setPrice(double price){
-		this.price = price;
-	}
-	public String getServiceName(){
-		return name;
-	}
+
 
 }
