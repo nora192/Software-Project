@@ -21,6 +21,24 @@ public class MainClass {
 
 	public static void main(String[] args) {
 
+		IAdmin Admin1= new Admin();
+		String data;
+		int dataInt;
+		System.out.println("Enter \n  -1 for Admin Mode \n -2 for User Mode ");
+		Scanner sc = new Scanner(System.in);
+		int choice = sc.nextInt();
+		if(choice == 1)
+		{
+
+		}
+		if (choice == 2)
+		{
+		System.out.println("Welcome , Please Sign In to get to the System \n Enter Your Email : ");
+		data = sc.nextLine();
+		System.out.println("Enter your Password :");
+
+//		Admin1.addUser();
+		}
 		ArrayList<Services> AllServices=new ArrayList<Services>();
 
 		Services s = new MobileWE("mobile we", 500 );
