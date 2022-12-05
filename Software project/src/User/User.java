@@ -29,6 +29,7 @@ public class User extends IUser{
     public IWallet getWallet(){
     	return wallet;
     }
+    
     public void checkRefund(){
         if(refundState == ""){
             System.out.println("your request is still pending");

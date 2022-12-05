@@ -5,13 +5,17 @@ import Discounts.specific;
 import Internet.InternetEtisalat;
 import Mobile.MobileWE;
 import Payment.*;
+import User.AddUser;
 import User.AddWalletFunds;
 import User.IUser;
+import User.RefundHandling;
+import User.RefundInvoker;
 import User.User;
 import User.IUser;
 import User.User;
 import User.Register;
 import User.IAdmin;
+import User.IRefundInvoker;
 import User.Admin;
 import User.Search;
 import java.util.ArrayList;
@@ -21,7 +25,7 @@ public class MainClass {
 
 	public static void main(String[] args) {
 
-		IAdmin Admin1= new Admin();
+//		IAdmin Admin1= new Admin();
 		String data;
 		int dataInt;
 		System.out.println("Enter \n  -1 for Admin Mode \n -2 for User Mode ");
@@ -45,13 +49,16 @@ public class MainClass {
 		IFormHandler hn= new FormHandler(s);
 		((MobileWE) s).setHandler(hn);
 
-		Services s2 = new InternetEtisalat("Intrenet Etisalat" , 200);
+//		Services s2 = new InternetEtisalat("Intrenet Etisalat" , 200);
+		
 		IUser user1 = new User("nada@gmail","l","gf");
 		IcreditCard credit = new CreditCard(user1,"11",1000);
 		IUser A = new User("nada", "l", "gf");
-		IAdmin Admin = new Admin();
-		Admin.addUser(user1);
-		Admin.addUser(A);
+		
+		IAdmin addUser = new AddUser();
+		
+		((AddUser) addUser).addUser(user1);
+		((AddUser) addUser).addUser(A);
 //		Scanner sc = new Scanner(System.in);
 //		String name = sc.nextLine();
 //		String mail = sc.nextLine();
@@ -64,35 +71,40 @@ public class MainClass {
 		((MobileWE) s).MyHandler.PrintForm();
 
 
+////
+////		((MobileWE) s).PrintForm();
 //
-//		((MobileWE) s).PrintForm();
+//		Payment p = new PayByCash("cairo");
+//		AllServices.add(s);
+//		AllServices.add(s2);
+//
+//		//System.out.println("hello world maryam");
+//
+//		UpdatedPayment payment = new PayByCard(credit);
+//		((MobileWE) s).setPayment(payment);
+//
+//		Discounts_Decorator d  = new overall(s,50);
+//		//d= new overall(s2,50);
+//		ArrayList<Services> Discounts=new ArrayList<Services>();
+//		Discounts.add(s);
+//		Discounts.add(s2);
+//
+//		//((MobileWE) s).pay();
+//
+//		Discounts_Decorator d2  = new specific(d,50);
+//
+//		double sum = d2.pay();
+//		payment.UpdateAmount(sum);
+//		System.out.println(credit.getAmount());
+//		Search search = new Search();
+//		search.execute();
 
-		Payment p = new PayByCash("cairo");
-		AllServices.add(s);
-		AllServices.add(s2);
-
-		//System.out.println("hello world maryam");
-
-		UpdatedPayment payment = new PayByCard(credit);
-		((MobileWE) s).setPayment(payment);
-
-		Discounts_Decorator d  = new overall(s,50);
-		//d= new overall(s2,50);
-		ArrayList<Services> Discounts=new ArrayList<Services>();
-		Discounts.add(s);
-		Discounts.add(s2);
-
-		//((MobileWE) s).pay();
-
-		Discounts_Decorator d2  = new specific(d,50);
-
-		double sum = d2.pay();
-		payment.UpdateAmount(sum);
-		System.out.println(credit.getAmount());
-		Search search = new Search();
-		search.execute();
-
-
+		IAdmin handle = new RefundHandling();
+		IRefundInvoker invoker = new RefundInvoker();
+		invoker.addRequestToList(user1, s, 100);
+		
+		((RefundHandling) handle).checkRefunds();
+		
 	}
 
 }
