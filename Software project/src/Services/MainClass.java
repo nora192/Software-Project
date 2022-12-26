@@ -193,7 +193,7 @@ public class MainClass {
 						
 						if (chosenService == null) {
 							System.out.println("Please subscribe to a service first and make a purchase \n");
-							
+							System.out.println("Please subscribe to a service first and make a purchase \n");
 							continue;
 						}
 						
